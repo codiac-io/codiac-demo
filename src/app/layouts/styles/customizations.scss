@@ -1,0 +1,709 @@
+@import "./var.scss";
+
+// $color-primary: rgb(121, 187, 48);
+// $color-primary: rgb(11, 103, 59);
+// $color-primary: rgb(94, 177, 85);
+$blue: rgb(73, 147, 211);
+
+input.form-control {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.client-details {
+
+  .contact-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  .contacts-title-and-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .contact-frame {
+    border: none !important;
+    padding: 0;
+
+    .contact-card-title {
+      font-size: 20px;
+      color: #626262;
+      margin-left: 0;
+      font-weight: 400;
+    }
+
+    .contact {
+      margin-bottom: 2rem;
+    }
+
+    .contacts {
+      .contacts-header {
+        font-size: 20px;
+        font-weight: 600;
+        color: #787878;
+        text-transform: capitalize;
+      }
+
+      .form-check {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+
+        input {
+          margin: 0;
+          padding: 0;
+
+        }
+
+        label {
+          margin: 0 0 0 8px;
+          cursor: pointer;
+          font-size: 16px;
+
+        }
+      }
+
+      form {
+        background-color: $color-master;
+      }
+
+      div.col-12 {
+        padding: 0;
+
+        .form-group {
+          margin: 0;
+          padding: 4px 0 4px 8px;
+        }
+
+        .col-6.p-r-0 {
+          padding: 0;
+
+
+        }
+      }
+
+      > * {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  .contact-action-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .client-info-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #787878;
+
+    span.business-name {
+      color: $color-primary;
+    }
+  }
+
+  .client-details-header {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .client-details-subheader {
+    display: flex;
+    justify-content: space-between;
+
+    span.title {
+      font-size: 20px;
+      text-transform: capitalize;
+      color: #787878;
+    }
+
+  }
+
+  .client-address {
+    .card-header {
+      padding-top: 0;
+      min-height: unset;
+    }
+
+    > div:first-child {
+      border: none;
+      margin-bottom: 0;
+
+      > div:nth-child(2) {
+        padding-bottom: 0;
+      }
+    }
+
+  }
+
+  .business-name-and-website {
+    .form-group {
+      padding-top: 0;
+    }
+
+    .website {
+      border: none;
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    div {
+      margin-bottom: 16px;
+    }
+  }
+
+}
+
+.header {
+  .brand {
+    width: 500px;
+    text-align: left;
+  }
+
+  .page-title {
+    color: $color-success;
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+}
+
+div.pipeline-summary {
+  background: $color-card-bg;
+  display: block;
+  padding: 1rem;
+  font-family: "proxima-nova", sans-serif;
+
+  height: 300px;
+
+  .row {
+    height: 100%;
+    align-items: center;
+  }
+
+  .card-body {
+    padding: 0 !important;
+  }
+
+  div.streak-card-header {
+    color: $color-master-lighter;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    //text-align: left;
+  }
+
+  .nvd3.nv-pie path {
+    fill-opacity: 1;
+    //color: $color-primary;
+    //fill: $color-primary;
+  }
+
+  h2 {
+    color: $color-primary;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    top: -6px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .donut-middle {
+    font-size: 32px;
+    font-weight: 600;
+    fill: $blue;
+  }
+}
+
+.pipeline-filter {
+  width: 200px;
+  margin-right: 1rem;
+}
+
+.form-group.search {
+  height: 35px;
+  padding-top: 2px;
+  margin-right: 1rem;
+  background: url("^^src/assets/img/svgs/search-solid.svg") no-repeat 95% center;
+  background-size: 1rem;
+  font-family: $base-font-family!important;
+  display: inline-block;
+  width: 200px;
+
+  input {
+
+  }
+}
+
+.table-title {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    color: $color-success;
+    font-weight: 400;
+    display: inline-block;
+  }
+
+  .create-bid-container {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
+
+.divider {
+  height: 2px;
+  margin: 2rem 2rem 1rem;
+  background-color: $color-success
+}
+
+.reports {
+  width: 100%;
+
+  .report-data {
+    width: 100%;
+  }
+
+  .report-card-container {
+    width: 100%;
+  }
+
+  .data-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .primary-data {
+    display: inline-block;
+    width: 300px;
+    margin-bottom: 1rem;
+
+    .data-value, .data-key {
+      display: block;
+      margin: 0;
+
+    }
+
+    .data-value {
+      color: $color-primary;
+      font-weight: 500;
+    }
+
+    .data-key {
+      font-weight: 500;
+    }
+  }
+
+  .bid-summary-report {
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      display: inline-block
+    }
+  }
+
+  .export-pdf {
+    background: $color-primary;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 40px;
+    padding: 0 1rem;
+    font-weight: 400;
+    //margin-bottom: 1rem;
+  }
+
+  .report-card-container {
+  }
+
+  .report-type {
+    //margin-left: 1rem;
+  }
+
+  .form-group.search.reports-filter {
+    margin-bottom: 0;
+  }
+
+  .reports-filter {
+    width: 200px;
+    margin-right: 1rem;
+
+
+  }
+}
+
+.settings {
+  padding: 1rem;
+
+  .pg-select {
+    width: 200px;
+  }
+}
+
+.new-bid {
+  .bid-number-and-status {
+    .card-body {
+      height: 56px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      height: 100%;
+    }
+
+    .bid-number, .bid-status {
+      margin-right: 64px;
+      //padding-top: 8px;
+      //padding-bottom: 8px;
+      //border-bottom: 1px solid #cbcbcb;
+    }
+
+  }
+
+
+  .form-group-default.required {
+    label:after {
+      color: #981960;
+      content: "*";
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 20px;
+      position: relative;
+      left: 2px;
+      top: 1px;
+    }
+
+    &:after {
+      display: none;
+
+    }
+  }
+
+  form {
+    .has-two-even-inputs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      > * {
+        width: 45%;
+      }
+    }
+  }
+
+  .new-bid-select {
+    width: 280px;
+  }
+
+  .new-bid-select-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+
+  pg-datepicker span {
+    margin-bottom: 0;
+  }
+
+  .input-group-append {
+    span {
+      margin-bottom: 0;
+    }
+  }
+
+  .remove-bottom-margin {
+    margin-bottom: 0;
+  }
+
+  .bid-amount {
+    input {
+      height: unset;
+    }
+  }
+
+  .pg-select {
+    //background-color: green;
+  }
+
+  .project-name-and-address {
+    width: 45%;
+  }
+
+  .project-name {
+    display: block;
+  }
+
+  .address {
+    display: block;
+  }
+
+  .lightest-master {
+    color: $color-master-lightest;
+
+  }
+
+  .lighter-master {
+    color: $color-master-lighter;
+
+  }
+
+  .light-master {
+    color: $color-master-light;
+
+  }
+
+  app-client {
+
+
+    .card-header, .card-body {
+      padding: 0;
+    }
+
+    .client-details-subheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .client-info-title {
+        font-weight: 600;
+        font-size: 22px;
+        text-transform: capitalize;
+        color: rgb(115, 115, 115);
+      }
+    }
+
+    .client-address {
+
+      .card-header {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        min-height: unset;
+      }
+
+      .card-body {
+        width: 50%;
+      }
+    }
+  }
+
+  div.business-name-and-website:first-child {
+    padding-right: 0;
+  }
+
+
+  .contacts {
+
+    .contact-action-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    .contacts-header {
+      font-size: 20px;
+      font-weight: 600;
+      color: #787878;
+      text-transform: none;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+
+      input {
+        margin: 0;
+        padding: 0;
+
+      }
+
+      label {
+        margin: 0 0 0 8px;
+        cursor: pointer;
+        font-size: 16px;
+
+      }
+    }
+
+    form {
+      background-color: white;
+    }
+
+    div.col-12 {
+      padding: 0;
+
+      .form-group {
+        margin: 0;
+        padding: 4px 0 4px 8px;
+      }
+
+      .col-6.p-r-0 {
+        padding: 0;
+
+
+      }
+    }
+
+    > * {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .contacts-title-and-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
+  }
+
+  .contact-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 1rem;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  .contact-card-title {
+    display: none;
+  }
+
+}
+
+.dashed{
+  @include box-shadow(none);
+  @include border-radius(4px);
+  @include transition(all .2s ease);
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132),0 .6px 1.8px 0 rgba(0, 0, 0, .108) !important;
+  padding: 15px;
+  // background-color: $color-card-bg;
+  border-style: dashed;
+  border-width: 4px;
+  color: $color-master;
+}
+
+.cabinet{
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: hidden;
+}
+
+.default-cabinet{
+  border: 1px solid #192229 !important; //192229 29323a
+}
+
+.config{
+  height: 20px;
+  overflow-y: hidden;
+}
+
+
+.expandable{
+  transition: height 1s ;
+}
+
+.expandable:hover{
+  height: 400px;
+  // z-index: 10;
+}
+
+.expand{
+  min-height: 400px !important;
+  // z-index: 10;
+}
+
+
+
+.streak-card-header {
+  padding: 5px;
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 28px;
+}
+
+.screen-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#add-bid-col {
+  max-width: fit-content;
+}
+
+.text-bright{
+  color: $color-bright;
+}
+
+
+.depth-8{box-shadow:0 3.2px 7.2px 0 rgba(0,0,0,.132),0 .6px 1.8px 0 rgba(0,0,0,.108);box-shadow:0 3.2px 7.2px 0 var(--callout-shadow-color,rgba(0, 0, 0, .132)),0 .6px 1.8px 0 var(--callout-shadow-secondary-color,rgba(0, 0, 0, .108))}
+.depth-16{box-shadow:0 6.4px 14.4px 0 rgba(0,0,0,.132),0 1.2px 3.6px 0 rgba(0,0,0,.108);box-shadow:0 6.4px 14.4px 0 var(--callout-shadow-color,rgba(0, 0, 0, .132)),0 1.2px 3.6px 0 var(--callout-shadow-secondary-color,rgba(0, 0, 0, .108))}
+.depth-64{box-shadow:0 25.6px 57.6px 0 rgba(0,0,0,.132),0 4.8px 14.4px 0 rgba(0,0,0,.108);box-shadow:0 25.6px 57.6px 0 var(--callout-shadow-color,rgba(0, 0, 0, .132)),0 4.8px 14.4px 0 var(--callout-shadow-secondary-color,rgba(0, 0, 0, .108))}.sub-layer{z-index:10}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}.text-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.text-left{text-align:left}
+
+.list-group{
+  list-style-type: none;
+}
+
+.list-group-item{
+  background-color: $color-nav-bg;
+  border-color: $color-card-bg;
+  // border-width: 1px;
+  // border-radius: 2px;
+  // padding-top: 3px;
+  // padding-bottom: 1px;
+  // padding-left: 3px;
+  // padding-right: 3px;
+}
+
+.fa-chevron-down{
+  color: $color-card-bg
+}
+
+.fa-chevron-right{
+  color: $color-card-bg
+}
+
+.vertical-text-top-down{
+  transform: rotate(90deg);
+  white-space: nowrap;
+}

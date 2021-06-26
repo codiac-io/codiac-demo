@@ -1,0 +1,91 @@
+<!-- WRAP LAYOUT IF BOXED -->
+<div class="container" *ngIf="_boxed; else basicLayoutBlock">
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</div>
+<ng-template #basicLayoutBlock>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</ng-template>
+
+<!-- YOUR LAYOUT CONTENT GOES INSIDE HERE -->
+<ng-template #contentTpl>
+
+  <!-- PAGE CONTAINER -->
+  <page-container class="no-padding">
+    <pg-header [boxed]="_boxed">
+      <div class="">
+        <!-- START EMAIL MOBILE TOGGLE -->
+        <a href="javascript:void(0);" class="toggle-secondary-sidebar" (click)="toggleSecondarySideBar()"
+          *ngIf="_layoutOption === 'email'">Inbox <span class="text-info">(12)</span> <span class="caret"></span></a>
+        <!-- END EMAIL MOBILE TOGGLE -->
+
+        <div class="brand inline p-l-10 p-r-10 " [class.d-none]="_layoutOption === 'email'">
+          <h5 class="d-lg-inline-block page-title">{{_pageTitle}}</h5>
+        </div>
+        <!-- START NOTIFICATION LIST -->
+        <ul
+          class="d-lg-inline-block d-none notification-list no-margin d-lg-inline-block b-grey b-l b-r no-style p-l-30 p-r-20">
+
+
+          <!-- <ng-template [ngIf]="_layoutOption != 'email'">
+            <li class="p-r-10 inline">
+              <a href="javascript:void(0)" class="header-icon pg pg-link"></a>
+            </li>
+            <li class="p-r-10 inline">
+              <a href="javascript:void(0)" class="header-icon pg pg-thumbs"></a>
+            </li>
+          </ng-template> -->
+
+          <ng-template [ngIf]="_layoutOption == 'email'">
+            <!-- <a href="javascript:void(0)" id="mark-email" class="mark-email m-l-20"><i
+                class="fa fa-pencil fs-16"></i></a> -->
+          </ng-template>
+        </ul>
+        <!-- END NOTIFICATIONS LIST  :                               (click)="openSearch($event)"-->
+        <!-- <a href="javascript:void(0)" class="search-link d-lg-inline-block d-none" ><i
+            class="pg pg-search"></i>Type anywhere to <span class="bold">search</span></a> -->
+      </div>
+      <div class="d-flex align-items-center">
+
+        <!-- START User Info-->
+        <!-- <user-tool-bar></user-tool-bar> -->
+        <!-- END User Info-->
+        <!-- <a href="javascript:void(0)" *ngIf="(showReporting$ | async)" class="header-icon pg pg-alt_menu btn-link m-l-10 sm-no-margin d-inline-block"
+          (click)="openQuickView($event)"></a> -->
+      </div>
+    </pg-header>
+    <div class="page-content-wrapper {{_pageContainerClass}}">
+      <!-- START PAGE CONTENT -->
+      <div class="content {{_contentClass}}" style="height: 89vh;">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- END PAGE CONTENT -->
+      <!-- START COPYRIGHT -->
+      <ng-template [ngIf]="_footer">
+        <div class=" container-fluid container-fixed-lg footer">
+          <div class="copyright sm-text-center">
+            <p class="small no-margin pull-left sm-pull-reset row">
+              <span class="hint-text">Copyright &copy; {{ currentDate | date:'yyyy' }}</span>&nbsp;<span
+                class="font-montserrat">Codiac LLC</span>.&nbsp;<bds-terms-of-services></bds-terms-of-services>
+              <span class="sm-block" *ngIf="(version$ | async)">
+                <span class="m-l-10">|</span> <span class="m-l-10 hint-text">v.
+                  {{(version$ | async)}}</span>
+              </span>
+            </p>
+
+            <p class="small no-margin pull-right sm-pull-reset">
+              Hand-crafted <span class="hint-text">&amp; made with Love</span>
+            </p>
+
+            <div class="clearfix">
+            </div>
+          </div>
+        </div>
+        <!-- END COPYRIGHT -->
+      </ng-template>
+    </div>
+  </page-container>
+  <!-- QUICKSEARCH -->
+  <!-- <app-search-overlay></app-search-overlay> -->
+  <!-- QUICKVIEW -->
+  <!-- <app-quickview></app-quickview> -->
+</ng-template>

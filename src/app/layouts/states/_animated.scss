@@ -1,0 +1,169 @@
+// Lightbox animation states
+
+/* Add button-animated to any button to see the animated background */
+
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+
+.button-animated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition-property: color;
+  transition-duration: 0.3s;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover:before,
+  &:active:before {
+    transform: scale(2);
+  }
+  &:hover {
+    text-decoration: none!important;
+  }
+}
+
+.fade {
+    @include opacity(0);
+    transition: opacity .15s linear;
+}
+
+.fade.in {
+    @include opacity(1);
+}
+
+
+/* Alerts animation */
+
+
+.animate-alerts .bell {
+	animation-name: bellring;
+	animation-duration: 2s; /* 2s seems to be good */
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	transform-origin: 50%;
+}
+
+
+@keyframes bellring { 
+	0% { transform: rotate(0) translateX(0) translateY(0); }
+  5% { transform: rotate(21deg) translateX(-12%) translateY(2%); }
+	15% { transform: rotate(-28deg) translateX(12%) translateY(3%); }
+  30% { transform: rotate(16deg) translateX(-8%) translateY(0); }
+  50% { transform: rotate(-12deg) translateX(4%) translateY(0); }
+  75% { transform: rotate(4deg) translateX(-3%) translateY(0); }
+  100% { transform: rotate(0) translateX(0) translateY(0); }
+}
+
+.animate-alerts .bell-striker {
+	animation-name: striker;
+	animation-duration: 1.5s; 
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	transform-origin: 50%;
+}
+
+
+@keyframes striker { 
+  0% { transform: translateX(0) translateY(0); }
+  5% { transform: translateX(2%) translateY(0); }
+	10% { transform: translateX(-3%) translateY(0); }  /* In between */
+	15% { transform: translateX(3%) translateY(0); }
+	22% { transform: translateX(-3%) translateY(0); }  /* In between */                             
+  30% { transform: translateX(6%) translateY(0); }
+  50% { transform: translateX(-12%) translateY(0); }
+  75% { transform: translateX(8%) translateY(0); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+.animate-alerts .alert-counter {
+	animation-name: counter;
+	animation-duration: 1s; 
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	transform-origin: 50%;
+}
+
+
+@keyframes counter { 
+  0% { transform: scale(0.2,0.2); }
+  90% { transform: scale(1.2,1.2); }
+  100% { transform: scale(1,1); }
+}
+
+
+/* Alerts animation */
+
+.animate-notification {
+	animation-name: notification;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	transform-origin: 50%;
+}
+
+
+@keyframes notification { 
+	0% { transform: translateY(0); }
+  12% { transform: translateY(-34px); }
+  15% { transform: translateY(-26px); }
+  75% { transform: translateY(-26px); }
+  78% { transform: translateY(-32px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* Nav overlay animation */
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}

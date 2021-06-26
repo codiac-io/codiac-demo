@@ -1,0 +1,307 @@
+// ******* States ********
+// These include hover, active, etc as well as an active state of a module such as clickable, draggable
+
+// TO DO: Better conformance to modular references and revise selector efficiency //
+// Also need to strip out anything screen-specific like line-item and these can be encapsulated in the screen's view
+// Look at moving template alongside [hidden] 
+@import '../styles/core.scss';
+
+
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.draggable {
+  &:hover {
+    svg, .drag-me {
+    cursor: move!important;
+    cursor: -webkit-grab!important;
+    }
+  }
+}
+
+.hoverShow {
+  .hoverToggle {
+  display: none;
+  }
+  &:hover {
+    .hoverToggle {
+      display: block;
+      }
+  }
+}
+
+.line-item:hover {
+  .fadedIcon {
+    @include opacity(0.54);
+    &:hover {
+      @include opacity(0.87);
+    }
+  }
+  .disabledIcon,
+  .disabledIcon:hover {
+    @include opacity(0.27);
+  }
+}
+
+.activeIcon {
+  @include opacity(0.54);
+  &:hover {
+    @include opacity(1);
+  }
+}
+
+.fadedIcon {
+  @include opacity(0.27);
+  &:hover {
+    @include opacity(0.87);
+  }
+}
+
+.disabledIcon {
+  @include opacity(0.27);
+  stroke: $black;
+  &:hover {
+    @include opacity(0.27);
+  }
+}
+
+.whiteIcon, .whiteIcon:hover {
+  @include opacity(1);
+  svg {
+    fill: $white;
+    stroke: $white;
+  }
+}
+
+.dropdownIcon {
+  margin-right: 12px;
+}
+
+.k-list li:hover .dropdownIcon {
+  @include invert;
+}
+
+.flipIcon svg {
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.noFill svg {
+  fill: none!important;
+}
+
+.warningMessage {
+  color: $color-danger;
+}
+
+.hintMessage {
+  width: 100%;
+  text-align: center;
+  @include opacity(0.27);
+  margin: 12px 0;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.full-width {
+ width: 100%; 
+}
+
+.fadehover {
+    @include opacity(0.54);
+    &:hover {
+      @include opacity(0.87);
+    }
+}
+
+.faded {
+  @include opacity(0.54);
+}
+
+.text-center {
+  text-align: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.Fixed {
+  position: absolute;
+}
+
+.noBorder {
+   border: 0;
+  .k-dateinput-wrap, .k-dropdown-wrap, .k-picker-wrap, .k-multiselect-wrap, .k-numeric-wrap {
+    border: 0;
+  }
+}
+
+// Used but defined in base themes as only uses a color
+// .hoverBack {
+// }
+
+.btnInvisible {
+  border:0;
+  background: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+[hidden], template {
+    display: none;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.pad-top-10 {
+  padding-top: 10px;
+}
+
+.pad-right-5 {
+  padding-right: 5px
+}
+
+.pad-top-10 {
+  padding-top: 10px;
+}
+
+.margin-top {
+  margin-top: 6px;
+}
+
+.margin-bottom {
+  margin-bottom: 6px;
+}
+
+.margin-left {
+margin-left: 6px;
+}
+
+.margin-right {
+  margin-right: 6px;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.text-ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Scrolling */
+
+.scroll-vertical {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll-none {
+  overflow: hidden;
+}
+
+/* Heights */
+.fullHeight {
+  height: 100%;
+}
+
+.maxHeight {
+  height: 100%;
+  max-height: 95%; /* Needed for bug in notes and docs where hovering over pin at top pushes textbox down */
+}
+
+/* No overflow - important for scrollable flexbox areas */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Font states */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* Sidebar states */
+
+/* States */
+
+.visible-menu,
+.visible-notes,
+.visible-docs,
+.visible-alerts,
+.visible-help,
+.visible-search {
+    width: 240px;
+}
+
+// .visible-action {
+//     height: 32px;
+//     display: block;
+// }
+
+/* Tab states */
+.nodatatab span,
+.nodatatab a,
+.nodatatab .nodatalink {
+  @include opacity(0.54);
+}
+
+/* CSS Grid states */
+
+
+.hidden {
+  display: none!important;
+}
+
+.noheight {
+  height: 0!important;
+}
+.nowidth {
+  width: 0!important;
+}
+
+.pinned {
+  position: relative;
+  z-index: 2;
+  box-shadow: none;
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  top: 0!important; //Needed for legit override of states for hidden-footer, hidden-title, etc
+}
+
+/* Rotate */
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.rotate270 {
+  transform: rotate(270deg);
+}
+
+/* Text hint */

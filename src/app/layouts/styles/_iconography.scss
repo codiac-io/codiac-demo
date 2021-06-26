@@ -1,0 +1,102 @@
+// New icon sizes
+
+// Define sizes - colors in themes
+.icon-small,
+.icon-smallw,
+.icon-smallbw {
+  width: 10px;
+  height: 10px;
+}
+
+.icon-standard,
+.icon-standardw,
+.icon-standardbw,
+.icon-standard > svg,
+.icon-standardw > svg,
+.icon-standardbw > svg {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-medium,
+.icon-mediumw,
+.icon-mediumbw,
+.icon-medium > svg,
+.icon-mediumw > svg,
+.icon-mediumbw > svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+.icon-large,
+.icon-largew,
+.icon-largebw,
+.icon-large > svg,
+.icon-largew > svg,
+.icon-largebw > svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* Hover */
+.icon-small,
+  .icon-smallw,
+  .icon-smallbw,
+  .icon-medium,
+  .icon-mediumw,
+  .icon-mediumbw,
+  .icon-standard,
+  .icon-standardw,
+  .icon-standardbw,
+  .icon-large,
+  .icon-largew,
+  .icon-largebw {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+
+
+
+/* IE 11 */
+
+/* IE - all 11 and Edge - These only support SVG 1.1 spec and not SVG 1.2 tiny or SVG 2 - therefore no understanding of the vector-effect attribute with non-scaling-stroke */
+
+// .no-smil {
+//   .icon-large,
+//   .icon-largew,
+//   .icon-standard,
+//   .icon-standardw,
+//   .icon-small,
+//   .icon-smallw {
+//     stroke-width: 16;
+//   }
+//   .icon-small,
+//   .icon-smallw {
+//     stroke-width: 14;
+//   }
+//   .icon-standard,
+//   .icon-standardw {
+//     stroke-width: 12;
+//   }
+//   .icon-medium,
+//   .icon-mediumw {
+//     stroke-width: 11;
+//   }
+//   .icon-large,
+//   .icon-largew {
+//     stroke-width: 10;
+//   }
+ 
+// }
+
+/*.no-smil.no-webaudio {
+
+}*/
+
+
+/* Once IE detection is in place, force stroke-width to 4 or 5 on icons */

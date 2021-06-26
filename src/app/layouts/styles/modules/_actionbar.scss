@@ -1,0 +1,77 @@
+/* Actionbar - non layout styles */
+.action{
+  max-height: 15px;
+}
+/* Temp hiding of action-overflow */
+.action-overflow {
+  display: none;
+}
+
+.action {
+  width: auto;
+  padding-left: $padding-large;
+  padding-right: $padding-medium;
+  display: flex;
+  &:disabled {
+      cursor: default!important;
+      @include opacity(0.5);
+      &:hover {
+        @include opacity(0.5);
+      }
+  }
+}
+
+.action-icon {
+  width: 14px;
+  padding-top: 8px;
+}
+
+.action-text {
+  padding-left: $padding-small;
+  line-height: 32px;
+}
+
+.screen-setting {
+  padding-right: $padding-large;
+  padding-top: 9px;
+}
+
+.action-overflow {
+  margin-left: 24px;
+  width: 14px;
+  height:32px;
+  position: relative;
+}
+
+.action-overflow-trigger {
+  padding-top: 9px;
+  display: inline-block;
+}
+
+.actionBar-item-dropdown {
+  position: relative;
+  max-height: 32px;
+
+  .action {
+    margin-right: $padding-large;
+  }
+
+  .dropdown {
+      position: relative;
+      &:after{
+          content: '';
+          width: 6px;
+          height: 6px;
+          margin-top: 3px;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -6px;
+          display: block;
+          position: absolute;
+          border-top: 4px solid $color-master-light;
+          border-bottom: 4px solid transparent;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+      }
+  }
+}

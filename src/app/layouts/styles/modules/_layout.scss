@@ -1,0 +1,212 @@
+/*------------------------------------------------------------------
+[1. Layouts]
+*/
+html {
+  height: 100%;
+}
+
+/* Body Triggers for layout options
+------------------------------------------------------------------
+*/
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  //background-color: $color-master-lightest;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+
+  &.fixed-header {
+    .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &.no-header {
+    .page-container .page-content-wrapper .content {
+      padding-top: 0px;
+    }
+
+    .header {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &.dashboard {
+    background: $dashboard-background;
+
+    .page-container {
+      background: $dashboard-background;
+    }
+  }
+
+  &.menu-pin {
+    .overlay {
+      padding-left: 0;
+
+      .overlay-brand {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/* Page Container
+------------------------------------
+*/
+.page-container {
+  width: 100%;
+  height: 100%;
+  padding-left: $layout-sidepanel-width-collapsed;
+
+  .page-content-wrapper {
+    background-color: $color-master-bg;
+    min-height: 93vh !important;
+    position: relative;
+
+    .content {
+      /* Content holder */
+      z-index: 10;
+      padding-top: $layout-header-height;
+      padding-bottom: 69px;
+      min-height: 100%;
+      @include transition(all 0.3s ease);
+
+      &.full-width {
+        width: 100%;
+      }
+
+      .content-inner {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        padding-left: 30px;
+        position: relative;
+      }
+
+      &:only-child {
+        padding-bottom: 0px;
+      }
+
+      &.overlay-footer {
+        padding-bottom: 0px;
+      }
+    }
+
+    .footer {
+      /* Footer */
+      width: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include transition(left 0.3s ease);
+
+      &.fixed {
+        position: fixed;
+      }
+    }
+  }
+}
+
+.page-title {
+  margin-top: 0px;
+}
+
+.group-container {
+  white-space: nowrap !important;
+
+  .single-group {
+    vertical-align: top;
+    display: inline-block;
+    white-space: normal;
+  }
+}
+
+.jumbotron {
+  position: relative;
+  // overflow: hidden;
+  display: block;
+  padding: 0;
+  max-width: 2400px;
+
+  .inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  &.lg {
+    height: 600px;
+  }
+
+  background-color: $color-master-bg;
+
+  .cover-photo {
+    width: 100%;
+    height: inherit;
+    // overflow: hidden;
+    @include transition(opacity .3s ease);
+    background-size: cover;
+    background-color: $color-master-light;
+    background-position-y: -320px !important;
+  }
+
+  // h1 {
+  //   font-size: 44px;
+  // }
+}
+
+/* Other overides */
+
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.copyright {
+  padding: 10px;
+  padding-bottom: 0px;
+  border-top: 1px solid fade($color-master-light, 70%);
+}
+
+
+.pager {
+  margin: 0;
+}
+
+/* A file to hold custom flex classes and potentially the CSS Grid Layout custom classes */
+/* Using l- prefix to indicate layout */
+
+
+/* Parents */
+.l-flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.l-flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* Children */
+
+.l-flex-fillHeight {
+  flex: 1;
+}
+
+.l-flex-fillWidth {
+  flex: 1;
+}
+
+.l-flex-start {
+  align-self: flex-start;
+}
+
+.l-flex-end {
+  align-self: flex-end;
+}

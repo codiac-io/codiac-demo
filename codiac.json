@@ -1,0 +1,26 @@
+{
+  "name": "demo-front-end",
+  "tenantCode": "codemo",
+  "codeVersion": "1.0.0",
+  "buildDef": [
+    "npm run prod-build"
+  ],
+  "buildIncludes": [],
+  "submodules": [],
+  "images": {
+    "demo-front-end": {
+      "name": "demo-front-end",
+      "targets": [
+        {
+          "environment": "default",
+          "registryUrl": "devcodiaccontainers.azurecr.io"
+        }
+      ],
+      "incarnations": [],
+      "definitionFile": "Dockerfile",
+      "port": "80",
+      "architecture": "amd64",
+      "OS": "linux"
+    }
+  }
+}

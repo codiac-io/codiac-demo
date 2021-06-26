@@ -1,0 +1,228 @@
+/* The main areas for the drag and drop components */
+
+/* TO DO - strip out the colors and put them in base colors - put some styles in modules */
+@import 'core.scss';
+
+.drag-actionblock {
+  padding-top: 8px;
+  width: auto;
+  height: 28px;
+  float: right;
+  margin-right: 12px;
+  button {
+    border: 0;
+    background: transparent;
+    width: 18px;
+    display: inline-block;
+  }
+}
+
+.container-drop,
+.container-drag {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-left: 10px;
+  &.openItem {
+    height: auto;
+  }
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .actionArea {
+    flex: 0;
+    padding: 4px 12px 0 0;
+  }
+  .checkboxArea {
+    flex: 0;
+    min-width: 28px;
+    padding-left: 12px;
+  }
+  .lineName {
+    flex: 1;
+    input {
+      width: auto!important;
+    }
+  }
+  .draghandle {
+    flex: 0;
+  }
+  .drag-actionblock {
+    flex: 0;
+  }
+  & > .draghandle {
+    min-height: 75px;
+    position: relative;
+    justify-content: center;
+    padding-top: 5%;
+    padding-left: 10%;
+  }
+  & > .draghandle:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0; right: 0; bottom: 0; left: 0;
+    // left: 10px;
+    line-height: 1;
+    content: "\f142 \f142 \A \f142 \f142 \A \f142 \f142 \A \f142 \f142 \A";
+    white-space: pre-wrap;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.container-dropItem,
+.container-dragItem {
+  width: 100%;
+  // height: 24px;
+  display: block;
+  overflow: hidden;
+  display: flex;
+
+  &.openItem {
+    height: auto;
+  }
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .actionArea {
+    flex: 0;
+    padding: 4px 12px 0 0;
+  }
+  .checkboxArea {
+    flex: 0;
+    min-width: 28px;
+    padding-left: 12px;
+  }
+  .lineName {
+    flex: 1;
+    input {
+      width: auto!important;
+    }
+  }
+  .draghandle {
+    flex: 0;
+  }
+  .drag-actionblock {
+    flex: 0;
+  }
+}
+
+
+.container-dropItem, .container-dragItem {
+  border-style: solid;
+  // border-color: #c3c8d2; // TO DO: Replace in base-theme
+  border-width: 0 0 1px 0;
+  .lineName {
+    padding-left: $padding-large;
+  }
+}
+
+.actionmessage {
+  @include opacity(0.27);
+  display: block;
+  margin: calc(49vh - 80px) auto 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.line-item {
+  height: 24px;
+  font-size: 11px;
+  border-style: solid;
+  border-color: #c3c8d2;
+  border-width: 0 0 1px 0;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+    input {
+      height:16px;
+      margin-top: 4px;
+    }
+    &:first-child {
+      border-width: 1px 0;
+    }
+}
+
+
+
+
+/* in-flight clone */
+.gu-mirror { /* Mirror is the state that is dragged */
+  .emptyContainerSite:before {
+   content: ""!important;
+ }
+ color: #fff;
+ width: 300px !important;
+ min-height: 125px !important;
+ border-radius: 3px !important;
+ position: fixed !important;
+ margin: 0 !important;
+ padding: 5px;
+ z-index: 9999 !important;
+//  @include opacity(0.87);
+ background: $color-complete;
+ border: 2px $color-master-darkest;
+ .lineName, .lineName2 {
+   height: 24px;
+   line-height: 24px;
+   h3 {
+     margin-top: 6px;
+     width: auto;
+     height: 24px!important;
+     line-height: 24px!important;
+     text-transform: capitalize!important;
+   }
+ }
+}
+
+.gu-hide {
+ display: none !important;
+}
+
+.gu-unselectable {
+ -webkit-user-select: none !important;
+ -moz-user-select: none !important;
+ -ms-user-select: none !important;
+ user-select: none !important;
+}
+
+
+.sub-route-item .gu-transit {
+ background-color: $color-danger!important;
+ .lineName {
+   padding-left: 10px;
+   .sub-route-item .gu-transit {
+     .lineName {
+       padding-left: 22px;
+     }
+   }
+ }
+}
+
+
+
+.gu-transit { /* Transit is the state that is left behind */
+ @include opacity(0.95);
+ background: $color-info;
+ border: 2px $color-master-darkest;
+ display: block;
+ height: 24px;
+ overflow: hidden;
+ .lineName {
+   height: 24px;
+   line-height: 24px;
+   h3 {
+     width: auto;
+   }
+ }
+}
+

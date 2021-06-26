@@ -1,0 +1,92 @@
+/* TO DO: Better conformance to modular references and revise selector efficiency */
+
+
+// mobile on/off class 
+
+@media (min-width: 993px) {
+  .onlymobile {
+    display: none!important;
+  }
+}
+
+@media (max-width: 992px) {
+  .nomobile {
+    display: none!important;
+  }
+  .onlymobile {
+    display: inline-block!important;
+  }
+}
+
+@media (min-width: 639px) {
+  .onlysmallmobile {
+    display: none!important;
+  }
+}
+
+.nosmallmobile {
+  display: inline-block;
+}
+@media (max-width: 639px) {
+  .nosmallmobile {
+    display: none;
+  }
+  .desktoptext {
+    display: none;
+  }
+  .headerblock.border-left, .headerblock.border-right {
+    border: 0;
+  }
+  .container {
+    width: calc(100% - 30px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px){
+  .mobileProfile {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 761px) {
+  .container,
+  .k-window {
+    // Scrollbar code for Webkit browsers 
+    // Track 
+    // Handle 
+    // Old IE styles but IE11 seems to support 
+    scrollbar-base-color: #7f7f7f;
+    scrollbar-3dlight-color: #ffffff;
+    scrollbar-highlight-color: #333333;
+    scrollbar-track-color: #cacaca;
+    scrollbar-arrow-color: #687d8c;
+    scrollbar-shadow-color: #ffffff;
+    scrollbar-dark-shadow-color: #ffffff;
+  }
+  .container ::-webkit-scrollbar,
+  .k-window ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  .container ::-webkit-scrollbar-track,
+  .k-window ::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    /* -webkit-border-radius: 12px;
+    border-radius: 12px; */
+    background: #eeeeee;
+  }
+  .container ::-webkit-scrollbar-thumb,
+  .k-window ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+  }
+  .container ::-webkit-scrollbar-thumb:window-inactive,
+  .k-window ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}

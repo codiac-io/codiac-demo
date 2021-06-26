@@ -1,0 +1,20 @@
+@import '../../layouts/styles/core.scss';
+$base-img-url: "../../../layouts/assets/images" !global;
+$assets-url: "../../../layouts/assets" !global;
+
+@import "../../layouts/styles/modules/layout";
+
+.jumbo-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% auto;
+  margin-top: -250px;
+}
+
+.jumbo-logo {
+  // background-image:url('^assets/img/landing/bidstreak-green-cranes.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+  margin-top: -50px;
+}

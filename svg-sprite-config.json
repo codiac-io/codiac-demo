@@ -1,0 +1,35 @@
+{
+    "log": "verbose",  
+    "dest": "src/",
+    "shape": {
+        "transform": [
+          {"svgo": {
+                  "plugins"	: [
+                      {"removeUnknownsAndDefaults": false},
+            {"removeUselessStrokeAndFill": false},
+            {"removeTitle": false},
+            {"removeDesc": false},
+            {"removeAttrs": {"attrs":"(stroke)"}}
+          ]	
+              }}
+        ]
+    },
+    "svg": {
+      "transform": [],  
+      "rootAttributes": {
+        "style": "display:none",
+        "width": "0",
+        "height": "0"
+      }
+    },
+    "mode": {
+      "symbol": {
+        "dest": "assets/icons/core",
+        "prefix": "icon-%s",
+        "dimensions": false,
+        "sprite": "icons-core.svg"
+      }
+  
+    }
+  }
+  
