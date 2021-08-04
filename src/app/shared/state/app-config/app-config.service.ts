@@ -15,7 +15,7 @@ export class AppConfigService {
 
   constructor(
     protected apiSvc: ApiService,
-    private environmentVariablesStore: AppConfigStore,
+    private appConfigStore: AppConfigStore,
     @Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
     this.getAppConfig()
@@ -45,9 +45,8 @@ export class AppConfigService {
           let configMappings = createAppConfig(response);
           configMappings.isStaticConfig = false;
 
-          this.environmentVariablesStore.update(state => {
-            return configMappings
-          });
+          this.appConfigStore.reset(); // hack, dont keep this.
+          this.appConfigStore.update(configMappings);
           return configMappings as AppConfig;
         }))
         .pipe(share());
