@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+<title>Global</title>
+<description>A symbol of a globe</description>
+  <g fill="none" fill-rule="evenodd" transform="translate(.5 .5)">
+    <circle vector-effect="non-scaling-stroke" cx="6.509" cy="6.509" r="6.249"/>
+    <ellipse vector-effect="non-scaling-stroke" cx="6.509" cy="6.509" rx="3.124" ry="6.249"/>
+    <path vector-effect="non-scaling-stroke" d="M1.66628571 10.4844689C2.81185714 9.78150466 4.55625 9.33889752 6.50892857 9.33889752 8.43557143 9.33889752 10.1539286 9.78150466 11.3255357 10.4584332M11.3515714 2.5333882C10.206 3.23635248 8.46160714 3.67895963 6.50892857 3.67895963 4.58228571 3.67895963 2.86392857 3.23635248 1.69232143 2.55942391"/>
+  </g>
+</svg>

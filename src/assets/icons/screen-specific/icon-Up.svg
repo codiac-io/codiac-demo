@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+	<title>Up</title>
+	<description>An arrow pointing up</description>
+  <g fill="none" fill-rule="evenodd">
+    <path vector-effect="non-scaling-stroke" d="M7,2.5 L7,13"/>
+    <polyline vector-effect="non-scaling-stroke" points="4 1.75 7 5 10 1.75" transform="rotate(180 7 3.375)"/>
+  </g>
+</svg>

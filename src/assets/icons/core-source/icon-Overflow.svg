@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Overflow</title>
+	<description>An icon consisting of three stacked vertical squares to indicate additional options</description>	
+<g fill-rule="evenodd">
+    <rect vector-effect="non-scaling-stroke" width="22" height="22" x="39" y="6"/>
+    <rect vector-effect="non-scaling-stroke" width="22" height="22" x="39" y="72"/>
+    <rect vector-effect="non-scaling-stroke" width="22" height="22" x="39" y="39"/>
+  </g>
+</svg>

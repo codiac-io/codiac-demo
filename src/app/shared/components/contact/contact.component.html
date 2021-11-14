@@ -1,0 +1,96 @@
+<!-- label -->
+<!-- edit -->
+<form novalidate [formGroup]="contactForm" class="contact-list" [class.no-background]="noHeader">
+  <div class="contact row {{ additionalClasses }}">
+    <!-- card controls -->
+    <div class="col-12" *ngIf="!noHeader" style="display: flex; justify-content: space-between; align-items: center;">
+
+      <div class="contact-action-row">
+        <div class="left-edge">
+
+
+          <div class="form-check">
+            <input type="radio" id="default-contact-radio" name="default-contact-radio"
+              [checked]="(isDefault$ | async)">
+            <label for="default-contact-radio">Default
+              Contact</label>
+          </div>
+
+          <!--<span title="Set as Default" (click)="setAsDefault()">
+            <input type="radio" id="default-contact-radio"
+                   name="default-contact-radio"
+                   [checked]="(isDefault$ | async)"
+            >
+            <label for="default-contact-radio">Default
+              Contact</label>
+          </span>-->
+        </div>
+
+        <div class="right-edge">
+          <button class="btn btn-outline-secondary" type="button" title="Expand or Collapse"
+            (click)="expanded = !expanded"><span class="fa" [class.fa-minus]="expanded"
+              [class.fa-plus]="!expanded"></span>
+          </button>
+          <button *ngIf="!isNewContact" class="btn btn-outline-secondary delete-btn" type="button" title="Delete"
+            (click)="delete.emit()"><span class="fa fa-trash"></span>
+          </button>
+          <button *ngIf="isNewContact" class="btn btn-outline-secondary" type="button" title="Remove"
+            (click)="remove()"><span class="fa fa-trash"></span></button>
+        </div>
+      </div>
+    </div>
+    <h3 style="display: flex; align-items: center;">
+
+      <span class="contact-card-title">
+        {{contactCardTitle}}
+      </span>
+    </h3>
+
+    <div class="col-12">
+      <div class="row p-t-10" [class.hide]="!expanded">
+        <div class="contact-row">
+          <div>
+            <div pgFormGroupDefault class="form-group form-group-default">
+              <label>first Name</label>
+              <input placeholder="" class="form-control" formControlName="firstName" autocomplete="disabled">
+            </div>
+            <div
+              *ngIf="contactForm.get('firstName').errors && (contactForm.get('firstName').dirty || contactForm.get('firstName').touched)">
+              <label *ngIf="contactForm.get('firstName').errors.required" class="error">This field is required.</label>
+            </div>
+          </div>
+          <div class="">
+            <div pgFormGroupDefault class="form-group form-group-default">
+              <label>Last Name</label>
+              <input placeholder="" class="form-control" formControlName="lastName" autocomplete="disabled">
+            </div>
+            <div
+              *ngIf="contactForm.get('lastName').errors && (contactForm.get('lastName').dirty || contactForm.get('lastName').touched)">
+              <label *ngIf="contactForm.get('lastName').errors.required" class="error">This field is required.</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="contact-row">
+          <div>
+            <email [group]="contactForm"></email>
+          </div>
+          <div class="">
+            <phone [group]="contactForm.controls.phone"></phone>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div>
+            <div pgFormGroupDefault class="form-group form-group-default">
+              <label>Title</label>
+              <input placeholder="Superintendent" class="form-control" formControlName="title">
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

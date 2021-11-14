@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+	<title>Parent to Child</title>
+	<description>Two arrows pointing to the right indicating that the following field is a child of the previous field</description>
+  <g fill="none" fill-rule="evenodd">
+    <polyline vector-effect="non-scaling-stroke"  points="7 2 12 6.988 7 11.996"/>
+    <polyline vector-effect="non-scaling-stroke"  points="2 2 7 6.988 2 11.996"/>
+  </g>
+</svg>

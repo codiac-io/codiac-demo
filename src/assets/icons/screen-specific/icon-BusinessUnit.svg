@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+	<title>Business Unit</title>
+	<description>A business briefcase</description>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="13" height="10" x=".5" y="3.5" vector-effect="non-scaling-stroke" rx="2"/>
+    <rect width="13" height="6" x=".5" y="3.5" vector-effect="non-scaling-stroke" rx="2"/>
+    <rect width="5" height="2" x="4.5" y="1.5" vector-effect="non-scaling-stroke" rx="1"/>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+// @import '~@quorumsoftware/core-styles/styles/base/_v';
+// @import '~@quorumsoftware/core-styles/styles/base/mixins';
+//@import '~@quorumsoftware/core-styles/styles/layout/dragDrop'; // Commenting out until encapsulation issue is resolved in component - for now its added to core style styles.scss
+
+
+.pattern-drag-drop {
+    display: flex;
+}
+
+.drag-left {
+    flex: 1;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 8px 8px 0;
+    border-color: #bbbbbb;
+    margin-right: 6px;
+}
+
+.drag-right {
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #bbbbbb;
+    margin-left: 6px;
+    position: relative;
+}
+
+.section-label {
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    margin-top: -12px;
+    font-size: 11px;
+    padding: 4px 6px;
+    margin-left: 8px;
+    background: #eaf1f4;
+}
+
+
+
+.drag-container-globalactions {
+    display: flex;
+    align-items: center;
+}
+.drag-container-status {
+    flex: 1;
+}
+.drag-checkbox-column {
+    flex: 0;
+    min-width: 40px;
+    padding-left: 12px;
+}
+.drag-drag-column {
+    flex: 0;
+}
+
+.drag-container-actions {
+    flex: 0;
+    min-width: 170px;
+    text-align: right;
+    padding-right: 12px;
+}
+
+.drag-container-item {
+        display: inline-block;
+        width: auto!important;
+}
+
+.drag-drop-left, .drag-drop-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.drag-headerarea, .drag-filterarea, .drag-selectedarea {
+    flex: 0;
+}
+
+.drag-filterarea {
+    padding: 0 6px;
+}
+
+.drag-contentarea {
+    flex: 1;
+}
+
+.container-empty:before {
+    content: 'Drop items here';
+    margin: 24px 12px;
+    padding-top: 12px;
+    opacity: 0.27;
+    line-height: 28px;
+}

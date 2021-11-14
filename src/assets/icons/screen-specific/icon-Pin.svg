@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Pin</title>
+	<description>A traditional feltboard pin</description>
+  <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <polyline vector-effect="non-scaling-stroke" points="48 60.553 7 93 39.442 52"/>
+    <path vector-effect="non-scaling-stroke" d="M92.4193303,28.9450188 L71.3355582,7.60172319 C70.1761837,6.42215924 67.9989967,7.03524567 66.5260355,8.93007713 L50.9775152,30.8004119 C42.0411926,28.2638116 32.0368836,30.502832 25,37.54257 L62.4476176,75 C69.5776813,67.8706294 71.787123,57.6865825 69.0902781,48.6587951 L91.0108784,33.7062982 C92.9300285,32.2775558 93.5876644,30.1209974 92.4193303,28.9450188 Z"/>
+  </g>
+</svg>

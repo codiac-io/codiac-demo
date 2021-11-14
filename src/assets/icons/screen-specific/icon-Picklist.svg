@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Picklist</title>
+	<description>A list with an arrow pointing to a specific line</description>
+  <g fill="none" fill-rule="evenodd">
+    <path vector-effect="non-scaling-stroke" d="M6 22L77.296875 22M6 50L58 50"/>
+    <path vector-effect="non-scaling-stroke" d="M59.4856436,40 L82,61.6137821 L104.514356,40 L59.4856436,40 Z" transform="rotate(90 82 51)"/>
+    <path vector-effect="non-scaling-stroke" d="M6,79 L77.296875,79"/>
+  </g>
+</svg>

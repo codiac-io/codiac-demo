@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<title>Main Menu</title>
+<description>Three horizontal lines stacked above one another</description>
+  <g fill="none" fill-rule="evenodd" >
+    <path vector-effect="non-scaling-stroke" d="M6 7L94 7M6 50L94 50M6 93L94 93"/>
+  </g>
+</svg>

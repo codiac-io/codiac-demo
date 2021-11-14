@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Overflow</title>
+	<description>Three round dots stacked vertically indicating a menu containing more options</description>
+  <g fill="none" fill-rule="evenodd" transform="translate(38 6)">
+    <rect vector-effect="non-scaling-stroke" width="24" height="24"/>
+    <rect vector-effect="non-scaling-stroke" width="24" height="24" y="66"/>
+    <rect vector-effect="non-scaling-stroke" width="24" height="24" y="33"/>
+  </g>
+</svg>

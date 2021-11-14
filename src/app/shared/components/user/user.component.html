@@ -1,0 +1,103 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<form novalidate [formGroup]="userForm">
+  <pgcard Close="false" Refresh="false" Maximize="false" Toggle='false' ProgressType="bar"
+    [AdditionalClasses]="additionalClasses" [ShowLoading]="true">
+    <ng-template #CardTitle>
+      <div class="row justify-content-between align-items-center">
+        <span class="user-card-name"> {{ userCardTitle }}</span>
+        <div>
+          <span style="margin-right: 10px;" *ngIf="isExistingUser">
+            <button class="btn btn-outline-secondary" type="button" title="Send Reset Password Link"
+              [disabled]="!userForm.pristine || userForm.disabled" (click)="onRequestResetPassword();">
+              <span class="fa fa-unlock" [class.fa-unlock]="!isSendingResetPasswordLink"
+                [class.fa-spinner]="isSendingResetPasswordLink" [class.fa-pulse]="isSendingResetPasswordLink"></span>
+            </button>
+            <button class="btn btn-outline-secondary delete-btn" type="button" title="Delete" (click)="delete.emit()"
+              [disabled]="userForm.disabled"><span class="fa fa-trash"></span></button>
+          </span>
+          <span>
+            <button class="btn btn-outline-secondary" type="button" title="Reset" (click)="reset.emit()"
+              [disabled]="userForm.pristine || additionalClasses?.length > 0 || userForm.disabled"><span
+                class="fa fa-refresh"></span></button>
+            <button class="btn btn-outline-secondary" type="button" title="Close" (click)="remove.emit()"><span
+                class="fa fa-close"></span></button>
+          </span>
+        </div>
+      </div>
+    </ng-template>
+    <div class="row">
+      <div class="col-6">
+        <div>
+          <div pgFormGroupDefault class="form-group form-group-default required">
+            <label>First Name</label>
+            <input class=" form-control" type="text" placeholder="New User" formControlName="firstName">
+          </div>
+          <div *ngIf="userForm?.get('firstName').errors">
+            <label
+              *ngIf="userForm?.get('firstName').errors.required && (userForm.get('firstName').dirty || userForm.get('firstName').touched)"
+              class="error">This
+              field is
+              required.</label>
+          </div>
+        </div>
+
+        <div>
+          <div pgFormGroupDefault class="form-group form-group-default required">
+            <label>Last Name</label>
+            <input class=" form-control" type="text" placeholder="New User" formControlName="lastName">
+          </div>
+          <div *ngIf="userForm?.get('lastName').errors">
+            <label
+              *ngIf="userForm?.get('lastName').errors.required && (userForm.get('lastName').dirty || userForm.get('lastName').touched)"
+              class="error">This
+              field is
+              required.</label>
+          </div>
+        </div>
+
+        <div>
+          <email [group]="userForm"></email>
+        </div>
+
+      </div>
+      <div class="col-6">
+        <pg-select style="width: 100%;" formControlName="role" class="account-type" PlaceHolder="Account Type"
+          (OpenChange)="onOpenChange($event)">
+          <pg-option *ngFor="let role of roles" [Label]="role.label" [Value]="role.value">
+          </pg-option>
+        </pg-select>
+        <div *ngIf="userForm.get('role').errors">
+          <label
+            *ngIf="userForm.get('role').errors.required && (userForm.get('role').dirty || userForm.get('role').touched)"
+            class="error">This
+            field is
+            required.</label>
+        </div>
+        <!-- <div pgFormGroupDefault class="form-group form-group-default">
+          <label>Password</label>
+          <input type="password" placeholder="Minimum of 8 Charactors" class="form-control" formControlName="password"
+            #passwordDom>
+        </div>
+        <div *ngIf="userForm?.get('password').errors">
+          <label
+            *ngIf="userForm?.get('password').errors.required && (userForm?.get('password').dirty || userForm?.get('password').touched)"
+            class="error">This
+            field is required.</label>
+        </div>
+        <mat-password-strength #passwordComponent [password]="userForm?.get('password').value"
+          (onStrengthChanged)="onStrengthChanged($event)" class="green" [enableDigitRule]="false">
+        </mat-password-strength>
+
+        <mat-password-strength-info *ngIf="userForm?.get('password').value" [passwordComponent]="passwordComponent">
+        </mat-password-strength-info> -->
+        <button class="btn btn-secondary text-white save" type="submit"
+          [class.disabled]="usersForm.invalid || usersForm.pristine" [disabled]="usersForm.invalid || usersForm.pristine ||
+            (!usersForm.valid && usersForm.invalid) " [ngClass]="{'btn-success': fmUsers.length}"
+          (click)="emitSave.emit()">
+          Save
+        </button>
+      </div>
+    </div>
+  </pgcard>
+</form>

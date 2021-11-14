@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<title>Search</title>
+<description>A magnifying glass</description>
+  <g fill="none" fill-rule="evenodd">
+    <circle vector-effect="non-scaling-stroke" cx="38.5" cy="38.5" r="31.5"/>
+    <path vector-effect="non-scaling-stroke" d="M61.5,61.5 L93.5156212,93.5156212"/>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+<div class="pull-left p-r-10 fs-14 font-heading ">
+  <div *ngIf="user">
+    <span class="semi-bold text-success">{{user.firstName}} {{user.lastName}}</span>
+  </div>
+  <div *ngIf="!user">
+    <span class="semi-bold"><a class="btn btn-secondary" routerLink="/public/login">Sign in</a></span>
+    <!-- <span class="semi-bold p-l-15"><button id="register-btn" type="button" class="btn btn-success"
+        routerLink="/public/register">Start Free
+        15-Day
+        Trial</button></span> -->
+  </div>
+</div>
+<div class="dropdown pull-right  " *ngIf="user" dropdown>
+  <button class="profile-dropdown-toggle" type="button" dropdownToggle id="profileDropdown">
+    <span class="thumbnail-wrapper d32 circular inline">
+      <img class="fxs-avatarmenu-tenant-image" data-bind="attr: { src: avatarUri }" alt=""
+        src="https://portal.azure.com/Content/static/MsPortalImpl/AvatarMenu/AvatarMenu_defaultAvatarSmall.png">
+    </span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right profile-dropdown " *dropdownMenu role="menu">
+    <div class=" profile-dropdown m-b-10 p-l-15 card">
+      <h6 class="text-success">Settings</h6>
+      <a href="javascript:void(0)" class=" dropdown-item" href="#/core/settings/users?ids={{user.id}}"><i
+          class="fs-13 fa fa-user-circle "></i>Profile</a>
+      <a href="javascript:void(0)" class="dropdown-item" href="#/core/settings/system?section=PaymentMethod"><i
+          class="fs-13 pg pg-settings_small"></i>Plan +
+        Billing</a>
+
+      <h6 class="text-secondary">Theme</h6>
+      <ui-switch checkedLabel="light" uncheckedLabel="dark" [disabled]="true" (change)="changeTheme($event)">
+      </ui-switch>
+
+      <div class="separator ">
+      </div>
+      <div>
+        <h6 class="text-success">Help</h6>
+        <a href="mailto:support@bidstreak.com?subject=Feedback" class="dropdown-item"><i
+            class="fs-13 pg pg-outdent"></i>
+          Feedback</a>
+        <a href="mailto:support@bidstreak.com?subject=Help" class="dropdown-item"><i class="fs-13 pg pg-signals"></i>
+          Help</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" (click)="logoutClick()" class="clearfix bg-master-lighter dropdown-item">
+      <span class="pull-left">Logout</span>
+      <span class="pull-right"><i class="fs-13 pg pg-power"></i></span>
+    </a>
+    <!-- <pre>{{ user | json }}</pre> -->
+
+  </div>
+</div>

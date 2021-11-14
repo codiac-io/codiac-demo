@@ -1,0 +1,105 @@
+<!-- <div class="drag-drop-right fullHeight"> -->
+<!-- <div class="label">Available {{entitiesShortDescription}}</div> -->
+<!-- Right pane content -->
+<!-- <div class="drag-headerarea">
+
+        <div class="drag-actionblock">
+          <button type="button" placement="bottom"
+            [tooltip]="sortDescription ? sortDescription : 'Sort ' + entitiesShortDescription"
+            (click)="sortDescendingAvailableToggle()" *ngIf="sortAvailableUsing">
+            <span *ngIf="!(sortDescendingAvailable$ | async)" class="activeIcon clickable">
+              <svg class="icon-standard">
+                <use xlink:href="assets/icons/core/icons-core.svg#icon-SortAscending"></use>
+              </svg>
+            </span>
+            <span *ngIf="(sortDescendingAvailable$ | async)" class="activeIcon clickable">
+              <svg class="icon-standard">
+                <use xlink:href="assets/icons/core/icons-core.svg#icon-SortDescending"></use>
+              </svg>
+            </span>
+
+          </button>
+          <button type="button" placement="bottom" tooltip="Toggle Filter" (click)="filterAvailableToggle()"
+            *ngIf="!!filterAvailableUsing">
+            <span [ngClass]="{'noFill activeIcon': filterAvailableHidden, 'activeFill': !filterAvailableHidden}"
+              class="clickable" id="filterToggleIcon">
+              <svg class="icon-standard">
+                <use xlink:href="assets/icons/core/icons-core.svg#icon-Filter"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="drag-filterarea" *ngIf="!filterAvailableHidden">
+
+        <div class="inputIcon">
+          <svg class="icon-medium disabledIcon">
+            <use xlink:href="assets/icons/core/icons-core.svg#icon-Filter"></use>
+          </svg>
+        </div>
+        <input class="filter filterBase filterSquare" type="search" id="searchbox2"
+          placeholder="Filter {{entitiesShortDescription}}" [formControl]="filterAvailableControl">
+
+      </div> -->
+
+<!--
+      <div *ngIf="multiSelectEnabled" class="drag-selectedarea">
+
+        <div class="drag-container-globalactions">
+
+           <div class="drag-drag-column">
+                // TO DO: detect if items are draggable and then show this div if they are
+              </div>
+          <div class="drag-checkbox-column">
+            <input class="drag-container-item" id="selectAllAvailableCheckbox" type="checkbox"
+              [formControl]="selectAllAvailableControl">
+          </div>
+
+          <div class="drag-container-status">
+            <span class="drag-container-item text-hint">{{availableRecordsSelected$ | async}}
+              {{entitiesShortDescription}} selected</span>
+          </div>
+          <div class="drag-container-actions">
+            <button class="btn" (click)="addAllSelected()" placement="top" tooltip="Move Selected">
+              <span id="addAllSelectedButton" class="activeIcon clickable rotate90">
+                <svg class="icon-standard">
+                  <use xlink:href="assets/icons/core/icons-core.svg#icon-Accordion"></use>
+                </svg>
+              </span>
+              Move Across Selected
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    -->
+
+<!-- <div class="drag-contentarea scroll-vertical container-drag">
+    <div class="container-drag" *ngFor="let entity of (availableFiltered$ | async); let i = index"
+      [attr.data-index]="i">
+      <div class="divider bg-secondary"></div>
+      <div class="draghandle draggable">
+        <div>
+          <div class="pull-right">
+            <p>
+              <ui-switch checkedLabel="cherry pick" uncheckedLabel="all"></ui-switch>
+            </p>
+          </div>
+        </div>
+        <div class="checkboxArea">
+          <input *ngIf="multiSelectEnabled" type="checkbox" [checked]="entity.selected"
+            (click)="toggleEntitySelected(entity, 'right')">
+        </div>
+        <div class="lineName draggable">
+          <h3 class="text-ellipsis">{{displayAvailableUsing(entity)}}</h3>
+        </div>
+        <div class="actionArea">
+
+        </div>
+      </div>
+      <div class="divider bg-secondary"></div>
+    </div>
+  </div> -->
+<!-- End of right pane content -->
+<!-- </div> -->

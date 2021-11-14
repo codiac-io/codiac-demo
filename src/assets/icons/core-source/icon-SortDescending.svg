@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<title>Sort Descending</title>
+<description>The letter A appearing over Z with an arrow indicating the direction of Z to A</description>	
+  <g fill="none" fill-rule="evenodd">
+    <path vector-effect="non-scaling-stroke" d="M28,8 L28,92.848158" transform="matrix(1 0 0 -1 0 100.848)"/>
+    <g transform="translate(58.065 7.215)">
+      <polyline vector-effect="non-scaling-stroke" points="0 34.656 17.151 .598 34.301 34.656"/>
+      <path vector-effect="non-scaling-stroke" d="M8.25765381,19.1207117 L26.0433697,19.1207117"/>
+    </g>
+    <polyline vector-effect="non-scaling-stroke" points="6 7 28.195 27.723 50 7" transform="matrix(1 0 0 -1 0 34.723)"/>
+    <polyline vector-effect="non-scaling-stroke" points="57.141 58.602 91.403 58.602 59 92 94 92"/>
+  </g>
+
+</svg>

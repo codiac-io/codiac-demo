@@ -1,0 +1,47 @@
+<!-- MODAL STICK UP SMALL ALERT -->
+
+<!-- <button (click)="slideUp.show()"></button> -->
+
+<div *ngIf="useModal" bsModal #slideUp="bs-modal" class="modal fade fill-in"
+  [config]="{backdrop: 'static',  keyboard: false}">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content-wrapper">
+      <div class="modal-content align-center">
+        <div class="modal-header clearfix text-left">
+          <h5> <span class="text-success">Payment </span> <span class="semi-bold">Information Needed</span></h5>
+          <p>Please adjust your payment method <span class="text-success">to proceed</span></p>
+        </div>
+        <bds-subscription-mgmt [section$]="section$" [iframeStyles]="'width:80vw;height:70vh;'">
+        </bds-subscription-mgmt>
+        <div class="justify-content-center row" *ngIf="!(showAbort$ | async); else abort">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL STICK UP SMALL ALERT -->
+
+<div *ngIf="!useModal">
+  <div class="text-left">
+    <h5> <span class="text-success bold">Payment </span> <span class="semi-bold">Information Needed</span></h5>
+    <p>Try Codiac <span class="text-success bold">risk free</span>. Your card will not be charged until your trial
+      period has ended.
+    </p>
+  </div>
+
+  <bds-subscription-mgmt [section$]="section$" [iframeStyles]="'width:75vw;height:65vh;'">
+  </bds-subscription-mgmt>
+  <div *ngIf="!(showAbort$ | async); else abort">
+  </div>
+</div>
+
+<ng-template #abort>
+  <div class="justify-content-center row">
+    <h5>
+      <span class="semi-bold">Or <button class="btn btn-outline-dark" (click)="logout()">Abort</button> if you
+        would
+        like to start over.
+      </span>
+    </h5>
+  </div>
+</ng-template>

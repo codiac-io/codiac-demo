@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Toggle Favorite</title>
+	<description>A star shape</description>
+    <polygon vector-effect="non-scaling-stroke" points="50 76.334 22.045 92 29 61.056 8 40.557 37.021 36.334 50 8 62.979 36.334 92 40.557 71 61.056 77.955 92"/>
+</svg>

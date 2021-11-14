@@ -1,0 +1,10 @@
+<form novalidate [formGroup]="phoneForm">
+  <div pgFormGroupDefault class="form-group form-group-default" [ngClass]="{'required': hasRequiredField}">
+    <label for="phone">Phone</label>
+    <input id='phone' class="form-control" formControlName="phone" placeholder="(555) 555-1234" [preValue]="phoneForm.get('phone').value" phoneMask maxlength="14">
+  </div>
+  <div>
+    <label *ngIf="phoneForm.controls['phone'].hasError('required') && phoneForm.get('phone').touched" class="error">This field is required.</label>
+    <label *ngIf="phoneForm.controls['phone'].hasError('minlength')" class="error">10 digit</label>
+  </div>
+</form>

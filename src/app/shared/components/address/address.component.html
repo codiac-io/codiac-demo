@@ -1,0 +1,60 @@
+<!-- label -->
+<!-- edit -->
+<form novalidate [formGroup]="addressFormGroup">
+    <div>
+        <div pgFormGroupDefault class="form-group form-group-default required">
+          <label>Project Street</label>
+          <input placeholder="321 Walking Bear Dr." class="form-control" formControlName="street" required
+            autocomplete="disabled">
+        </div>
+        <div
+          *ngIf="addressFormGroup.get('street').errors && (addressFormGroup.get('street').dirty || addressFormGroup.get('street').touched)">
+          <label *ngIf="addressFormGroup.get('street').errors.required" class="error">This field is required.</label>
+        </div>
+      </div>
+      <!-- <div>
+        <div pgFormGroupDefault class="form-group form-group-default">
+          <label>Street</label>
+          <input placeholder="321 Walking Bear Dr." class="form-control" formControlName="street2"
+            autocomplete="disabled">
+        </div>
+      </div> -->
+  <div class="row">
+    <div class="col-4 p-r-0">
+      <div pgFormGroupDefault class="form-group form-group-default required">
+        <label>City</label>
+        <input placeholder="Tampa" class="form-control" formControlName="city" required>
+      </div>
+      <div *ngIf="addressFormGroup.get('city').errors">
+        <label
+          *ngIf="addressFormGroup.get('city').errors.required && (addressFormGroup.get('city').dirty || addressFormGroup.get('city').touched)"
+          class="error">This field is
+          required.</label>
+      </div>
+    </div>
+    <div class="col-4 p-l-0 p-r-0">
+      <div pgFormGroupDefault class="form-group form-group-default required">
+        <label>State</label>
+        <input placeholder="FL" class="form-control" formControlName="state" required>
+      </div>
+      <div *ngIf="addressFormGroup.get('state').errors">
+        <label
+          *ngIf="addressFormGroup.get('state').errors.required && (addressFormGroup.get('state').dirty || addressFormGroup.get('state').touched)"
+          class="error">This field is
+          required.</label>
+      </div>
+    </div>
+    <div class="col-4 p-l-0 ">
+      <div pgFormGroupDefault class="form-group form-group-default required">
+        <label>Zip</label>
+        <input placeholder="77830" class="form-control" formControlName="zip" required>
+      </div>
+      <div *ngIf="addressFormGroup.get('zip').errors">
+        <label
+          *ngIf="addressFormGroup.get('zip').errors.required && (addressFormGroup.get('zip').dirty || addressFormGroup.get('zip').touched)"
+          class="error">This field is
+          required.</label>
+      </div>
+    </div>
+  </div>
+</form>

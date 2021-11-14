@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<title>Help</title>
+<description>A question mark inside a circle</description>
+<g fill="none" fill-rule="evenodd">
+    <circle vector-effect="non-scaling-stroke" cx="50.02" cy="72.02" r="1.02" fill="#000"/>
+    <path vector-effect="non-scaling-stroke" d="M60.3182519,39.3871167 L60.3182519,40.4531378 L60.3182519,40.4531378 C60.3182519,46.6227892 55.3167613,51.6242798 49.1471099,51.6242798 L49.1471099,51.6242798 L49.1471099,51.6242798 C43.4897036,51.6242798 38.9034696,47.0380458 38.9034696,41.3806395 C38.9034696,41.0850013 38.9162681,40.7895017 38.9418291,40.4949705 L39.0412887,39.3489296 L39.0412887,39.3489296 C39.5401009,33.6012754 44.3513576,29.1894809 50.120616,29.1894809" transform="rotate(180 49.61 40.407)"/>
+    <path vector-effect="non-scaling-stroke" d="M49.7853524,62.7628369 L49.7853524,51.5454375"/>
+     <circle vector-effect="non-scaling-stroke" cx="50" cy="50" r="44"/>
+  </g>
+</svg>

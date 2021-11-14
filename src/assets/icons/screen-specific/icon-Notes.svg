@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Notes</title>
+	<description>A symbol of a notepad</description>
+  <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" transform="translate(15 7)">
+    <path vector-effect="non-scaling-stroke" d="M71,5.60869565 C71,2.51109867 68.1951925,0 64.7352921,0 L6.26470645,0 C2.8048053,0 0,2.51109867 0,5.60869565 L0,80.3913043 C0,83.4888987 2.80480493,86 6.26470608,86 L64.7352898,86 C68.1951902,86 70.9999978,83.4888987 70.9999978,80.3913043 L70.9999978,5.60869565 L71,5.60869565 Z"/>
+    <circle vector-effect="non-scaling-stroke" cx="14" cy="10" r="2"/>
+    <path vector-effect="non-scaling-stroke" d="M14,8 L14,0"/>
+    <circle vector-effect="non-scaling-stroke" cx="28" cy="10" r="2"/>
+    <path vector-effect="non-scaling-stroke" d="M28,8 L28,0"/>
+    <circle vector-effect="non-scaling-stroke" cx="44" cy="10" r="2"/>
+    <path vector-effect="non-scaling-stroke" d="M44,8 L44,0"/>
+    <circle vector-effect="non-scaling-stroke" cx="59" cy="10" r="2"/>
+    <path vector-effect="non-scaling-stroke" d="M59,8 L59,0"/>
+  </g>
+</svg>

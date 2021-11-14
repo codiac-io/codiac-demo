@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<title>Close</title>
+<description>Two lines intersecting at 45 degree angles and continuing on to form an X shape</description>
+   <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+    <path vector-effect="non-scaling-stroke" d="M7.49867221,7.49867221 L92.5014706,92.5014706"/>
+    <path vector-effect="non-scaling-stroke" d="M7.49852945,7.49852945 L92.5013938,92.5013938" transform="matrix(-1 0 0 1 100 0)"/>
+  </g>
+</svg>

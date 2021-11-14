@@ -1,0 +1,11 @@
+<div class="page-content-wrapper ">
+  <div class="d-flex justify-content-center align-items-center jumbotron-background content">
+    <pgcard TimeOut="3000" [ngClass]="(containerClasses$ | async)"
+      AdditionalClasses="col-12 rounded justify-content-center align-items-center" BodyClass="col-12" NoHeader="true"
+      ProgressType="bar" Close="false" Maximize="false" Toggle="false" Refresh="false">
+      <div id="card-content" [@routeAnimations]="prepareRoute(sessionLandingOutlet)">
+        <router-outlet #sessionLandingOutlet="outlet"></router-outlet>
+      </div>
+    </pgcard>
+  </div>
+</div>

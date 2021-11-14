@@ -1,0 +1,9 @@
+<div class="">
+  <div [ngSwitch]="stillInTrialPeriod && reqIsSubscription">
+    <div *ngSwitchCase="true">cancel</div>
+    <div *ngSwitchDefault>
+      <div [innerHTML]="url$ | async | safe: 'html'"></div>
+    </div>
+  </div>
+  <br>
+</div>

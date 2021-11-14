@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Drag</title>
+	<description>Two horizontal lines, one above the other</description>	
+    <g fill="none" fill-rule="evenodd">
+    <path vector-effect="non-scaling-stroke" d="M80 70L20 70M80 30L20 30"/>
+  </g>
+</svg>

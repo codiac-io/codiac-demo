@@ -1,0 +1,16 @@
+<form novalidate [formGroup]="emailForm">
+  <div pgFormGroupDefault class="form-group form-group-default required">
+    <label>Email</label>
+    <input placeholder="grant@company.com" class="form-control" formControlName="email" required>
+  </div>
+  <div *ngIf="emailForm.get('email').errors">
+    <label
+      *ngIf="emailForm.get('email').errors.required && (emailForm.get('email').dirty || emailForm.get('email').touched)"
+      class="error">This
+      field is
+      required.</label>
+      <label *ngIf="emailForm.get('email').errors.email && emailForm.touched" class="error">
+        Please enter a valid email.
+      </label>
+  </div>
+</form>

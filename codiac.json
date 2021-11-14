@@ -3,7 +3,7 @@
   "tenantCode": "codemo",
   "codeVersion": "1.0.0",
   "buildDef": [
-    "npm run prod-build"
+    "echo"
   ],
   "buildIncludes": [],
   "submodules": [],
@@ -20,7 +20,8 @@
       "definitionFile": "Dockerfile",
       "port": "80",
       "architecture": "amd64",
-      "OS": "linux"
+      "OS": "linux",
+      "os": "linux"
     }
   }
 }

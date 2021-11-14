@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Calendar</title>
+	<description>A symbol of a wall calendar</description>
+  <g fill="none" fill-rule="evenodd">
+    <rect vector-effect="non-scaling-stroke"  width="86" height="78" x="7" y="15"/>
+    <path vector-effect="non-scaling-stroke"  d="M7,36 L93,36"/>
+    <path vector-effect="non-scaling-stroke"  d="M33 49.5L33 78.5M68 49.5L68 78.5"/>
+    <path vector-effect="non-scaling-stroke"  d="M72 25L72 5M26 25L26 5"/>
+  </g>
+</svg>

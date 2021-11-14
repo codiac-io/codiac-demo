@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Group</title>
+	<description>A series of three squares with an outline to indicate a grouping</description>	
+  <g fill="none" fill-rule="evenodd">
+    <polyline vector-effect="non-scaling-stroke" points="93 27 93 7 73 7"/>
+    <polyline vector-effect="non-scaling-stroke" points="27 27 27 7 7 7" transform="matrix(-1 0 0 1 34 0)"/>
+    <polyline vector-effect="non-scaling-stroke" points="27 93 27 73 7 73" transform="rotate(180 17 83)"/>
+    <polyline vector-effect="non-scaling-stroke" points="93 93 93 73 73 73" transform="matrix(1 0 0 -1 0 166)"/>
+    <rect vector-effect="non-scaling-stroke" width="18" height="18" x="7" y="38"/>
+    <rect vector-effect="non-scaling-stroke" width="18" height="18" x="75" y="38"/>
+    <rect vector-effect="non-scaling-stroke" width="18" height="18" x="41" y="38"/>
+  </g>
+</svg>

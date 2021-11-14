@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+	<title>Thumb</title>
+	<description>A hand with an outstretched thumb</description>	
+  <g fill="none" fill-rule="evenodd">
+    <path vector-effect="non-scaling-stroke" d="M11,5.5 L6.7699292,5.5 L7.11310241,3.8327381 C7,3 8,3.3327381 8,2 C8.00057291,1.45952381 7.1909297,0.5 6.5,0.5 L3,5.5 L0.5,5.5 L0.5,13.5 L9.58406409,13.5 C10.1243184,13.5 10.5912402,13.1077381 10.7046764,12.5589286 L11.932423,6.60654762 C12.08539,5.86547619 11.7298876,5.5 11,5.5 Z"/>
+    <path vector-effect="non-scaling-stroke" stroke-linecap="square" d="M2.5,6.5 L2.5,12.5"/>
+  </g>
+</svg>

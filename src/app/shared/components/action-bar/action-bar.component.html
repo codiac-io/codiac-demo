@@ -1,0 +1,97 @@
+<!-- ************* 2. Actionbar **************************** -->
+<!-- The actionbar should be referenced at this level if possible so it can be a part of the main app framework.
+      <action-bar></action-bar>
+      In some screens it appears at a deeper level which wouldnt make this a dynamic part of the layout
+      Dynamic areas that need to be hooked in:
+      - Actions
+      - Action links under overflow drop down menu - also not working with NGX-Bootstrap hiding the drop down menu from the DOM
+      - Favorite on/off (star on far right)
+
+      Other items in the screen settings under the actionbar like persona and settings can be hooked up if we need them but we can
+      probably hide them for now.
+  -->
+
+<div actionbarOverflow *ngIf="(relayReady$ | async)" (mouseover)="mouseOver($event)">
+  <div class="btn-toolbar actionHolder" style="vertical-align: top;" role="toolbar"
+    aria-label="Toolbar with button groups">
+    <ng-template #dots>
+      <div class="row pull-right" (mouseover)="mouseOver($event)" [@fadeAnimation]="!(expandedView$ | async)">
+        <span *ngFor="let x of primaryActionBarItems">
+          <i class="fa fa-xs fa-circle m-r-20 dot-color"></i>
+        </span>
+      </div>
+    </ng-template>
+    <ng-container *ngIf="expandedView$ | async; else dots">
+      <div id="screen-actions" class="screen-actions" class="btn-group btn-group-sm mr-2" role="group"
+        aria-label="First group"
+        [@fadeAnimation]="expandedView$ | async">
+        <ng-container *ngFor="let x of primaryActionBarItems">
+          <button *ngIf="!x.Dropdown" class="btn bg-info text-white" [disabled]="!x.Enabled" type="button"
+            [ngClass]="{'disabled': !x.Enabled, 'hidden': x.Hide}" [hidden]="x.Overflowed" (click)="selectItem(x)">
+            <!-- <div class="action-icon" tooltip="{{x.Name}}">
+          <svg class="icon-standardbw">
+            <use attr.xlink:href="assets/icons/core/icons-core.svg#{{x.IconFile}}"></use>
+          </svg>
+        </div> -->
+            <div class="action-text">{{x.Name}}</div>
+          </button>
+          <ng-container *ngIf="x.Dropdown" class="clickable actionBar-item-dropdown" [isDisabled]="!x.Enabled" dropdown
+            placement="bottom">
+            <button dropdownToggle class="btn bg-info text-white" [disabled]="!x.Enabled" type="button"
+              [ngClass]="{'disabled': !x.Enabled, 'dropdown': x.Dropdown}" [hidden]="x.Overflowed"
+              (click)="selectItem(x)">
+              <!-- <div class="action-icon" tooltip="{{x.Name}}">
+            <svg class="icon-standardbw">
+              <use attr.xlink:href="assets/icons/core/icons-core.svg#{{x.IconFile}}"></use>
+            </svg>
+          </div> -->
+              <div class="action-text">
+                {{x.Name}}
+                <i class="fa fa-ellipsis-v"></i>
+              </div>
+            </button>
+            <!-- Placeholder dropdown starts -->
+            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right col" role="menu">
+              <li *ngFor="let dropdownAction of x.DropdownItems" role="menuitem" (click)="selectItem(dropdownAction)">
+                <a class="dropdown-item">{{dropdownAction.Name}}</a>
+              </li>
+            </ul>
+
+
+            <div class="action-overflow clickable" dropdown placement="bottom right">
+              <a *ngIf="showMoreBtn" dropdownToggle class="action-overflow-trigger noFill">
+                <svg class="icon-standardbw">
+                  <use xlink:href="assets/icons/core/icons-core.svg#icon-Overflow"></use>
+                </svg>
+              </a>
+              <!-- combine all -->
+              <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+                <li *ngFor="let y of primaryActionBarItems" role="menuitem" (click)="selectItem(y)"
+                  [ngClass]="{'disabled': !y.Enabled}" [hidden]="!y.Overflowed">
+                  <a [ngClass]="{'hidden': y.Dropdown}" class="dropdown-item">{{y.Name}}</a>
+                  <!-- Dropdown items -->
+                  <ul *ngIf="y.Dropdown">
+                    <li *ngFor="let z of y.DropdownItems" (click)="z.Action"><a class="dropdown-item">{{z.Name}}</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+                <li *ngFor="let y of secondaryActionItems" role="menuitem" (click)="selectItem(y)"
+                  [ngClass]="{'disabled': !y.Enabled}" [hidden]="!y.Visible">
+                  <a class="dropdown-item">{{y.Name}}</a>
+                </li>
+              </ul>
+              <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+                <li *ngFor="let z of tertiaryActionItems" role="menuitem" (click)="selectItem(z)"
+                  [ngClass]="{'disabled': !z.Enabled}" [hidden]="!z.Visible">
+                  <a class="dropdown-item">{{z.Name}}</a>
+                </li>
+              </ul>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>

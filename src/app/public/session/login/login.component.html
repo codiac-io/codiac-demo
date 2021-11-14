@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+
+  <div class="col-7 p-t-40">
+    <h2 class="bold"><img style="width: 500px;" src="assets/img/codiac-logo-text-only.png" /></h2>
+    <p class="p-t-35">Sign into your Codiac account or <a routerLink="/public/register"><b>register</b></a></p>
+    <form class="p-t-15" role="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div class="col-md-12">
+        <!-- <div pgFormGroupDefault class="form-group form-group-default">
+          <label>Tenant</label>
+          <input formControlName="tenantCode" class="form-control" required>
+        </div> -->
+        <div pgFormGroupDefault class="form-group form-group-default">
+          <label>Email</label>
+          <input formControlName="login" class="form-control" required>
+        </div>
+        <div pgFormGroupDefault class="form-group form-group-default">
+          <label>Password</label>
+          <input type="password" placeholder="*********" class="form-control" id="asfmaweimSEImpf"
+            name="asfmaweimSEImpf" formControlName="password" required #passwordDom>
+        </div>
+        <div *ngIf="f.password.errors">
+          <label *ngIf="f.password.errors.required && (f.password.dirty || f.password.touched)" class="error">This field
+            is required.</label>
+        </div>
+
+        <div>
+          <button class="btn btn-primary btn-cons m-t-10" type="submit" [disabled]="loginForm.invalid">Login</button>
+          <div>
+            <label class="error">{{(apiMessage$ | async)}}</label>
+          </div>
+          <a routerLink="/public/request-reset"><b>Forgot password?</b></a>
+        </div>
+      </div>
+    </form>
+    <div class="row p-t-50">
+      <div class="col-lg-8">
+        I agree to the <bds-terms-of-services></bds-terms-of-services>
+      </div>
+      <div class="col-lg-4 text-right">
+        <a href="mailto:support@codia.io?subject=Help" class="text-info small">Help? Contact Support</a>
+      </div>
+    </div>
+  </div>
+</div>

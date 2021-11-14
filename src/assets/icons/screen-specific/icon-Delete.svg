@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Delete</title>
+	<description>Trash can</description>
+    <g fill="none" fill-rule="evenodd" >
+    <polygon vector-effect="non-scaling-stroke" points="21 14 79 14 79 94 21 94 21 55"/>
+    <path vector-effect="non-scaling-stroke" d="M36 24.6666667L36 83.3333333M50 24.6666667L50 83.3333333M65 24.6666667L65 83.3333333M14 14L86 14"/>
+    <polyline vector-effect="non-scaling-stroke" points="42 13 42 7 58 7 58 13"/>
+  </g>
+</svg>

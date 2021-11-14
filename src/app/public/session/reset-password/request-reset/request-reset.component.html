@@ -1,0 +1,29 @@
+<div class="row justify-content-center">
+
+    <div class="col-7 p-t-40">
+        <h2 class="bold"><img style="width: 500px;" src="assets/img/codiac-logo-text-only.png" /></h2>
+        <p class="p-t-35">Enter the email associated to this Codiac accouunt or <a
+                routerLink="/public/register"><b>register</b></a></p>
+        <form class="p-t-15" role="form" [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+
+            <div class="col-md-12">
+                <div pgFormGroupDefault class="form-group form-group-default">
+                    <label>Email</label>
+                    <input formControlName="login" class="form-control" required>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-cons m-t-10" type="submit" [disabled]="resetForm.invalid">Submit
+                        Reset</button>
+                </div>
+            </div>
+        </form>
+        <div class="row p-t-50">
+            <div class="col-lg-8">
+                <bds-terms-of-services></bds-terms-of-services>
+            </div>
+            <div class="col-lg-4 text-right">
+                <a href="mailto:support@codiac.io?subject=Help" class="text-info small">Help? Contact Support</a>
+            </div>
+        </div>
+    </div>
+</div>

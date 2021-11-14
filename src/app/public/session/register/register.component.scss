@@ -1,0 +1,146 @@
+mat-password-strength .mat-progress-bar-fill::after {
+  background-color: #4caf50;
+}
+
+.mat-password-field.mat-form-field.mat-focused .mat-form-field-label {
+  color: #4caf50;
+}
+
+.mat-password-field.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #4caf50;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.hero {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.hero-text {
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: .5em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.divider-right {
+  border-right: 1px solid #888888;
+  ;
+}
+
+.plan-primary {
+  background-color: #59253A;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 360px;
+  padding: 44px 20px 30px;
+  // border: 1px solid #0677A1;
+  border-radius: 4px;
+}
+
+.plan-header {
+  margin-bottom: 1em;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.plan-amount {
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  color: #000;
+}
+
+@media (min-width: 1200px) {
+  .plan-price {
+    font-size: 42px;
+  }
+}
+
+
+@media (min-width: 960px) {
+  .plan-price {
+    min-height: .8em;
+    font-size: calc(32px + 10*(100vw - 960px)/240);
+  }
+}
+
+@media (min-width: 768px) {
+  .plan-price {
+    min-height: .2em;
+  }
+
+  .plan-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  #confirm-password-wrapper {
+    margin-top: 10px;
+  }
+}
+
+
+.popover {
+  min-width: 22%;
+  z-index: 1060;
+}
+
+:host {
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.terms-privacy {
+  white-space: pre-wrap;
+  margin-right: 10px;
+}
+
+.submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15px;
+}

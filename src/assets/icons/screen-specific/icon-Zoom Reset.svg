@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+	<title>Zoom Reset</title>
+	<description>A magnifying glass showing a 1:1 ratio</description>	
+  <g fill="none" fill-rule="evenodd">
+    <circle  vector-effect="non-scaling-stroke" cx="5.5" cy="5.5" r="5" />
+    <path vector-effect="non-scaling-stroke" stroke-linecap="square" d="M3.5,3.5 L3.5,7.5"/>
+    <rect vector-effect="non-scaling-stroke" width="1" height="1" x="5" y="4"  fill-rule="nonzero"/>
+    <rect vector-effect="non-scaling-stroke" width="1" height="1" x="5" y="6"  fill-rule="nonzero"/>
+    <path vector-effect="non-scaling-stroke" stroke-linecap="square" d="M7.5,3.5 L7.5,7.5"/>
+    <path vector-effect="non-scaling-stroke" d="M9,9 L13,13"/>
+  </g>
+</svg>

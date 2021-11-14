@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Expand</title>
+	<description>An arrow pointing out from a flat base</description>	
+  <g fill="none" fill-rule="evenodd">
+    <polyline vector-effect="non-scaling-stroke" points="72.044 83.867 28.133 39.956 72.044 -3.956" transform="rotate(90 50.089 39.956)"/>
+    <path vector-effect="non-scaling-stroke" d="M6,83 L94,83"/>
+  </g>
+</svg>

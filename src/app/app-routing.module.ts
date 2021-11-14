@@ -11,7 +11,7 @@ const routes: Routes = [
     canLoad: [LoadConfigGuard],
     component: CondensedComponent,
     loadChildren: () => import('./public/public.module').then(m => m.PublicModule),
-    data: { title: 'Welcome to Codiac' }
+    data: { title: 'Welcome to WizBang' }
   },
   { path: 'password/:token', redirectTo: 'public/password/:token', pathMatch: 'prefix' },
   { path: 'request-reset', redirectTo: 'request-reset', pathMatch: 'prefix' },

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Import</title>
+	<description>An arrow leading from outside to inside a document</description>
+  <g fill="none" fill-rule="evenodd">
+    <path vector-effect="non-scaling-stroke" d="M67 50L7 50M31 7L31 93 94 93 94 7 31 7z"/>
+    <polyline vector-effect="non-scaling-stroke" points="36 40 58.195 60.723 80 40" transform="rotate(-90 58 50.361)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+	<title>Group</title>
+	<description>A set of stacked squares indicating a group</description>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="8" height="8" x=".5" y=".5" vector-effect="non-scaling-stroke"/>
+    <polyline vector-effect="non-scaling-stroke" points="2.5 9 2.5 10.5 10.5 10.5 10.5 2.5 9 2.5"/>
+    <polyline vector-effect="non-scaling-stroke" points="4.5 10.55 4.5 12.5 12.5 12.5 12.5 4.5 10.577 4.5"/>
+  </g>
+</svg>

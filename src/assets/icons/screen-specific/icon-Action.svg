@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Action</title>
+	<description>A movie clapperboard</description>
+     <g fill="none" fill-rule="evenodd">
+    	<polygon vector-effect="non-scaling-stroke" points="10.739 93 93 93 93 40.637 31.928 40.637 90.507 23.203 84.275 7 7 30.681 10.739 40.652"/>
+    	<path vector-effect="non-scaling-stroke" d="M26.5,65 L76.5,65"/>
+  </g>
+</svg>

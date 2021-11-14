@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>List View</title>
+	<description>Simple lines and circles illustrating a bulleted list</description>
+	 <g fill="none" fill-rule="evenodd">
+	    <path vector-effect="non-scaling-stroke" d="M94 15L34 15M94 50L34 50M94 85L34 85"/>
+	    <circle vector-effect="non-scaling-stroke" cx="15" cy="15" r="8"/>
+	    <circle vector-effect="non-scaling-stroke" cx="15" cy="50" r="8"/>
+	    <circle vector-effect="non-scaling-stroke" cx="15" cy="85" r="8"/>
+	</g>
+</svg>

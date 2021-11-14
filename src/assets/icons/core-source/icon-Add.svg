@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Add</title>
+	<description>A plus sign</description>
+  <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+    <path vector-effect="non-scaling-stroke" d="M94 50L6 50M50 6L50 94"/>
+  </g>
+</svg>

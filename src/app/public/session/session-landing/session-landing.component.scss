@@ -1,0 +1,212 @@
+// @import "../../../layouts/condensed/condensed.component.scss";
+
+@import '../../../layouts/styles/core.scss';
+$base-img-url: "^../../../layouts/assets/images" !global;
+$assets-url: "^../../../layouts/assets" !global;
+
+@import "../../../layouts/styles/modules/_layout.scss";
+@import "../../../layouts/styles/modules/_sidebar.scss";
+@import "../../../layouts/styles/modules/_secondary-sidebar.scss";
+@import '../../../layouts/styles/modules/_header.scss';
+@import '../../../layouts/styles/modules/_overlay-search.scss';
+@import '../../../layouts/styles/modules/_split-view.scss';
+//Sidebar Styles
+@import '../../../layouts/styles/modules/_quick-view.scss';
+@import '../../../layouts/styles/modules/_list.scss';
+
+//UI Components
+@import "../../../layouts/styles/icons.scss";
+@import "../../../layouts/styles/modules/_typography.scss";
+@import '../../../layouts/styles/modules/_breadcrumb.scss';
+@import "../../../layouts/styles/modules/_buttons.scss";
+@import "../../../layouts/styles/modules/_alerts.scss";
+@import "../../../layouts/styles/modules/_notifications.scss";
+@import "../../../layouts/styles/modules/_tabs_accordian.scss";
+@import "../../../layouts/styles/modules/_modals.scss";
+@import "../../../layouts/styles/modules/_progress_indicators.scss";
+
+//Pages Components
+@import "../../../layouts/styles/modules/_datepicker.scss";
+@import "../../../layouts/styles/modules/_timepicker.scss";
+@import "../../../layouts/styles/modules/_select.scss";
+@import "../../../layouts/styles/modules/_slider.scss";
+@import "../../../layouts/styles/modules/_switch.scss";
+@import "../../../layouts/styles/modules/_tabs.scss";
+@import "../../../layouts/styles/modules/_tags.scss";
+@import "../../../layouts/styles/modules/_uploader.scss";
+@import "../../../layouts/styles/modules/_pagination.scss";
+
+//Email App
+@import '../../../layouts/styles/modules/_email.scss';
+
+//View
+@import "../../../layouts/styles/modules/_view.scss";
+
+//Cards
+@import "../../../layouts/styles/modules/_cards.scss";
+
+//Form Elements
+@import "../../../layouts/styles/modules/_form_elements.scss";
+
+//Tables
+@import "../../../layouts/styles/modules/_tables.scss";
+
+//Charts
+@import "../../../layouts/styles/modules/_charts.scss";
+
+//List
+@import "../../../layouts/styles/modules/_list.scss";
+
+//Social
+@import "../../../layouts/styles/modules/_social.scss";
+
+//Email
+@import "../../../layouts/styles/modules/_email.scss";
+
+//Login
+@import "../../../layouts/styles/modules/_login.scss";
+
+//Lock screen
+@import "../../../layouts/styles/modules/_lock_screen.scss";
+
+//Timeline
+@import "../../../layouts/styles/modules/_timeline.scss";
+
+//Gallery
+@import "../../../layouts/styles/modules/_gallery.scss";
+
+//Chat
+@import "../../../layouts/styles/modules/_chat.scss";
+
+//Z-indexes
+@import "../../../layouts/styles/modules/z_index.scss";
+
+//Misc
+@import "../../../layouts/styles/modules/_misc.scss";
+
+//Print
+@import "../../../layouts/styles/modules/_print.scss";
+
+//Misc Helpers
+@import "../../../layouts/styles/modules/_misc.scss";
+
+//Demo - Remove in production
+@import "../../../layouts/styles/modules/_demo.scss";
+
+//Responsive Classes
+@import "../../../layouts/styles/_responsive.scss";
+
+//Utils
+@import "../../../layouts/styles/utils.scss";
+//Vendor
+@import "../../../layouts/styles/vendor/perfect-scroller.scss";
+// @import "../../../layouts/styles/vendor/typehead.scss";
+// @import "../../../layouts/styles/vendor/ng-tree.scss";
+// @import "../../../layouts/styles/vendor/quill.scss";
+// @import "../../../layouts/styles/vendor/ng-datatable.scss";
+// @import "../../../layouts/styles/vendor/ngx-nvd3.scss";
+// @import "../../../layouts/styles/vendor/ngx-google-map.scss";
+
+div.page-content-wrapper {
+  flex: 1;
+  min-height: unset !important;
+
+  .content {
+    padding-top: unset !important;
+    min-height: unset !important;
+  }
+}
+
+#card-content {
+  min-height: calc(60vh);
+  overflow: hidden;
+}
+
+// .cranes {
+//   // background-image:url('^assets/img/landing/bidstreak-green-cranes.svg');
+//   background-position: center;
+//   background-size: 300% auto;
+//   margin-top: -100px;
+// }
+
+.session-jumbotron {
+  height: 100vh !important;
+  padding-top: 0;
+}
+
+.cranes {
+  // background-image:url('^assets/img/landing/bidstreak-green-cranes.svg');
+  background-position: center;
+  background-color: transparent;
+  background-size: 400% auto;
+  // margin-top: -100px;
+  opacity: 0.2;
+}
+
+.jumbo-logo {
+  // background-image:url('^assets/img/landing/bidstreak-green-cranes.svg');
+  background-position: center;
+  background-size: 100% auto;
+  // margin-top: -100px;
+}
+
+.fix-card {
+  top: 45px;
+  z-index: 2;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .fix-card {
+    top: 0px;
+    z-index: 2;
+    max-height: 100%;
+  }
+}
+
+// when view portal shrinks dramatically in height, offer vertical scroll
+@media screen and (max-height: 450px) {
+  .fix-card {
+    overflow-y: scroll;
+  }
+}
+
+.session {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+}
+
+// prevent oversized page content
+div.jumbotron {
+  margin-bottom: 0;
+}
+
+
+.jumbotron-background {
+  height: calc(100vh);
+  width: calc(100vw);
+}
+
+// display background image with opacity
+.jumbotron-background::after {
+  content: "";
+  background: url('^../../../../assets/img/codiac-logo-text-only.png');
+  background-position: center;
+  background-size: 280%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: .4;
+}
+
+.centralizer-card {
+  display: flex;
+  justify-content: center;
+}

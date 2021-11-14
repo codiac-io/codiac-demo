@@ -1,0 +1,259 @@
+<div #slideUp>
+  <div class="col-12">
+    <div class="row">
+      <div *ngIf="!(showPmt$ | async)" class="col-6 col-xl-3 justify-content-center text-center card plan plan-primary">
+        <h4 class="plan-header">Standard Business Plan</h4>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <span class="plan-amount">
+          Coming Soon!
+        </span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>&nbsp;</div>
+        <!-- <p class="plan-price">
+          <span class="plan-amount">
+            $1725
+          </span>
+        </p>
+        <span class="text-muted">/ per month</span>
+        <br>
+        <ol class="plan-list text-left ">
+          <b class="p-b-15">All Codiac Features</b>
+          <li class="plan-item" *ngFor="let item of freatures$ | async">
+            <svg width="14" height="14" viewBox="0 0 14 14" class="plan-icon">
+              <path d="M7,0a7,7,0,1,0,7,7A7,7,0,0,0,7,0ZM5.6,10.5,2.1,7l1-1L5.6,8.52l5.31-5.31,1,1Z" fill="#77bc1f">
+              </path>
+            </svg>
+            {{item}}
+          </li>
+        </ol>
+        <div class="justify-content-center text-center">
+          <b>Additional Users</b>
+        </div>
+        <div class="justify-content-center text-center">
+          <b class="p-b-15">$10 per month / per user</b>
+        </div> -->
+      </div>
+      <div class="col-6 col-xl-9" [ngClass]="{'col-12': (showPmt$ | async)}">
+
+        <div class="row" *ngIf="!(showPmt$ | async)">
+          <div class="col">
+            <span style="display: flex; white-space: nowrap;">
+              <h5 class="simi-bold">Start your new </h5>
+              <h2 class="bold"><img style="width: 500px;" src="assets/img/codiac-logo-text-only.png" /></h2>
+              <h5 class="simi-bold">&nbsp;account today</h5>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <form class="p-t-15" role="form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()"
+              *ngIf="!(showPmt$ | async)">
+              <div class="row">
+                <div class="col-xl-9 col-lg-7 col-sm-12">
+                  <div pgFormGroupDefault class="form-group form-group-default">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="Company Name" class="form-control" id="txtTenantName"
+                      name="tenantName" formControlName="tenantName" required>
+                  </div>
+                  <div *ngIf="f.tenantName.errors && (f.tenantName.dirty || f.tenantName.touched)">
+                    <label *ngIf="f.tenantName.errors.required" class="error">This field is required.</label>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-5 col-sm-12">
+                  <div pgFormGroupDefault class="form-group form-group-default">
+                    <label>Total Users</label>
+                    <input type="text" placeholder="Number" class="form-control" id="txtqtyUsers" name="qtyUsers"
+                      formControlName="qtyUsers" required popoverTitle="The Math" placement="right"
+                      [popover]="billingPopover" container="body" outsideClick="true">
+                  </div>
+
+                  <div *ngIf="f.qtyUsers.errors && (f.qtyUsers.dirty || f.qtyUsers.touched)">
+                    <label *ngIf="f.qtyUsers.errors.required" class="error">This field is required.</label>
+                    <label *ngIf="f.qtyUsers.errors.pattern" class="error">Numeric greater than zero.</label>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="(f.tenantName.value && f.qtyUsers.value)">
+                <div class="row ">
+                  <h4 class="plan-header">Create an administrator account. </h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12">
+                    <div pgFormGroupDefault class="form-group form-group-default">
+                      <label>First Name</label>
+                      <input type="text" placeholder="" class="form-control" id="txtfname" name="txtfname"
+                        formControlName="firstName" required>
+                    </div>
+                    <div *ngIf="!f.firstName.valid && (f.firstName.dirty || f.firstName.touched)">
+                      <label *ngIf="f.firstName.errors.required" class="error">This field is required.</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12">
+                    <div pgFormGroupDefault class="form-group form-group-default">
+                      <label>Last Names</label>
+                      <input type="text" placeholder="" class="form-control" id="txtlname" name="txtlname"
+                        formControlName="lastName" required>
+                    </div>
+                    <div *ngIf="!f.lastName.valid && (f.lastName.dirty || f.lastName.touched)">
+                      <label *ngIf="f.lastName.errors.required" class="error">This field is required.</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <email [group]="registrationForm"></email>
+                  </div>
+                </div>
+                <!-- PASSWORD FIELDS -->
+                <div class="row">
+                  <!-- password  -->
+                  <div class="col-lg-6 col-sm-12">
+                    <div pgFormGroupDefault class="form-group form-group-default">
+                      <label>Password</label>
+                      <input type="password" placeholder="Minimum of 8 Characters" class="form-control"
+                        formControlName="password" validateEqual="passwordConfirmation" reverse="true" required
+                        #passwordDom>
+                    </div>
+                    <div *ngIf="f.password.errors">
+                      <label *ngIf="f.password.errors.required && (f.password.dirty || f.password.touched)"
+                        class="error">This
+                        field is required.</label>
+                      <!-- <label *ngIf="r.password.errors.minLength" class="error">This field is required.</!-->
+                    </div>
+                    <div class="row">
+                      <mat-password-strength #passwordComponent [password]="f.password.value"
+                        (onStrengthChanged)="onStrengthChanged($event)" class="green" [enableDigitRule]="false">
+                      </mat-password-strength>
+
+                      <!--Password's strength info-->
+                      <mat-password-strength-info *ngIf="f.password.value" [passwordComponent]="passwordComponent">
+                      </mat-password-strength-info>
+                    </div>
+                  </div>
+                  <!-- confirm password -->
+                  <div class="col-lg-6 col-sm-12" id="confirm-password-wrapper">
+                    <div *ngIf="f.password.value.length >= passwordComponent.min">
+                      <div pgFormGroupDefault class="form-group form-group-default">
+                        <label>Password Confirmation</label>
+                        <input type="password" placeholder="Retype password" class="form-control"
+                          formControlName="passwordConfirmation" validateEqual="password" required
+                          #passwordConfirmationDom>
+                      </div>
+                      <div *ngIf="f.passwordConfirmation.errors && f.passwordConfirmation.touched">
+                        <label
+                          *ngIf="f.passwordConfirmation.errors.required && (f.passwordConfirmation.dirty || f.passwordConfirmation.touched)"
+                          class="error">This field is required.
+                        </label>
+
+                        <!-- match other field error -->
+                        <div [hidden]="!f.passwordConfirmation.errors.validateEqual === false" class="error">
+                          This field must MATCH the password provided.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="submit-row">
+                  <bds-terms-of-services></bds-terms-of-services>
+                  <div class="" *ngIf="!(showPmt$ | async)">
+                    <button class="btn btn-primary btn-cons m-t-5 pull-right" type="submit"
+                      [disabled]="(!(validPassword$ | async) && (!f.valid)) || disabled"
+                      [class.disabled]="(!(validPassword$ | async) && (!f.valid)) || disabled">Create a new
+                      account</button>
+                    <div>
+                      <label class="error">{{(apiMessage$ | async)}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="row justify-content-center" *ngIf="(showPmt$ | async)">
+              <bds-subscription-prompt [useModal]="false" class="col" (pmtAccepted$)="finishReg()">
+              </bds-subscription-prompt>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #billingPopover class="col-12" style="z-index: 1051;">
+        <div class="col-10 justify-content-center">
+          <div class="row">
+            <div class="col-4 text-right">
+              <label>
+                <span class="text-secondary bold">$50</span>
+              </label>
+            </div>
+            <div class="col-8 text-right">
+              <label>
+                Business Plan
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 text-right">
+              <label>
+                <span class="text-secondary bold">1</span>
+              </label>
+            </div>
+            <div class="col-8 text-right">
+              <label>
+                Admin User @ $0/included
+              </label>
+            </div>
+          </div>
+          <div class="row" *ngIf="(f.qtyUsers.value && f.qtyUsers.value > 1)">
+            <div class=" col-4 text-right">
+              <label>
+                <span class="text-danger bold">+ {{f.qtyUsers.value - 1}}</span>
+              </label>
+            </div>
+            <div class="col-8 text-right">
+              <label>
+                Additional Users @ $10/each
+              </label>
+            </div>
+          </div>
+          <div class="separator card m-b-0 ">
+          </div>
+          <div class="row">
+            <div class="col-4 text-right">
+              <label>
+                <span class="text-danger bold">${{total}}/mo</span>
+              </label>
+            </div>
+            <div class="col-8 text-right">
+              <label>
+                Standard & additional users
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </ng-template>
+    </div>
+
+  </div>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+	<title>Save</title>
+	<description>An old-fashioned stiffy disk</description>	
+	<g fill="none" fill-rule="evenodd">
+    <polygon vector-effect="non-scaling-stroke" points="7 7 80 7 93 20 93 93 7 93"/>
+    <polygon vector-effect="non-scaling-stroke" points="23.688 7 23.688 39 76.312 39 76.312 7"/>
+    <polygon vector-effect="non-scaling-stroke" points="23.688 50 23.688 93 76.312 93 76.312 50"/>
+    <path vector-effect="non-scaling-stroke" d="M64,13.5 L64,31.5"/>
+  </g>
+</svg>
