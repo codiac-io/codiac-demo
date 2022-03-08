@@ -22,12 +22,12 @@
     "e2e": "ng e2e",
     "show-events": "kubectl get events --all-namespaces",
     "show-cluster-issuer": "kubectl get ClusterIssuer --all-namespaces",
-    "azSetSubcription": "az account set --subscription 37dbb924-5ee5-470b-b2a3-187e9dea7008",
-    "pointAKS": "az aks get-credentials -n demo-cluster-01 -g demo-cluster-01-rg --overwrite-existing",
-    "k8sSwitch": "kubectl config use-context demo-cluster-01",
+    "azSetSubcription": "az account set --subscription 925b0e8f-90a9-4b99-a212-7018ffcb8914",
+    "pointAKS": "az aks get-credentials -n demo-cluster-1 -g demo-cluster-1-rg --overwrite-existing",
+    "k8sSwitch": "kubectl config use-context demo-cluster-1",
     "set-cluster": "npm run azSetSubcription && npm run pointAKS && npm run k8sSwitch",
-    "pointAKS2": "az aks get-credentials -n demo-cluster-01 -g demo-cluster-01-rg --overwrite-existing",
-    "k8sSwitch2": "kubectl config use-context demo-cluster-02",
+    "pointAKS2": "az aks get-credentials -n demo-cluster-uk-1 -g demo-cluster-uk-1-rg --overwrite-existing",
+    "k8sSwitch2": "kubectl config use-context demo-cluster-uk-1",
     "set-cluster2": "npm run azSetSubcription && npm run pointAKS2 && npm run k8sSwitch2",
     "build-svg-sprites": "svg-sprite --config svg-sprite-config.json src/assets/icons/core-source/*.svg",
     "proj-login": "az login && npm run set-cluster && cod login",
@@ -35,7 +35,7 @@
     "serve:ssr": "node dist/angular/server/main.js",
     "build:ssr": "ng build -c prod && ng run angular:server:production",
     "prerender": "ng run angular:prerender",
-    "cluster-create": "codiac noc:cluster:create demo-cluster-uk-3 -p codemo -s 37dbb924-5ee5-470b-b2a3-187e9dea7008 -g 'demo-cluster-uk-3-rg' -l 'UK West' -n Standard_DS2_v2 -q 2"
+    "cluster-create": "codiac noc:cluster:create demo-cluster-uk-1 -p codemo -s 925b0e8f-90a9-4b99-a212-7018ffcb8914 -g 'demo-cluster-uk-1-rg' -l 'UK West' -n Standard_DS2_v2 -q 2"
   },
   "private": true,
   "dependencies": {
