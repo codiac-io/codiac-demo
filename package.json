@@ -67,7 +67,7 @@
     "echarts": "^4.2.1",
     "express": "^4.15.2",
     "hash-sum": "^2.0.0",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "https": "^1.0.0",
     "i": "^0.3.6",
     "imagesloaded": "^4.1.4",
