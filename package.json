@@ -26,7 +26,7 @@
     "pointAKS": "az aks get-credentials -n demo-cluster-01 -g demo-cluster-01-rg --overwrite-existing",
     "k8sSwitch": "kubectl config use-context demo-cluster-01",
     "set-cluster": "npm run azSetSubcription && npm run pointAKS && npm run k8sSwitch",
-    "pointAKS2": "az aks get-credentials -n demo-cluster-02 -g demo-cluster-02-rg --overwrite-existing",
+    "pointAKS2": "az aks get-credentials -n demo-cluster-01 -g demo-cluster-01-rg --overwrite-existing",
     "k8sSwitch2": "kubectl config use-context demo-cluster-02",
     "set-cluster2": "npm run azSetSubcription && npm run pointAKS2 && npm run k8sSwitch2",
     "build-svg-sprites": "svg-sprite --config svg-sprite-config.json src/assets/icons/core-source/*.svg",
@@ -34,7 +34,8 @@
     "dev:ssr": "ng run angular:serve-ssr",
     "serve:ssr": "node dist/angular/server/main.js",
     "build:ssr": "ng build -c prod && ng run angular:server:production",
-    "prerender": "ng run angular:prerender"
+    "prerender": "ng run angular:prerender",
+    "cluster-create": "codiac noc:cluster:create demo-cluster-uk-3 -p codemo -s 37dbb924-5ee5-470b-b2a3-187e9dea7008 -g 'demo-cluster-uk-3-rg' -l 'UK West' -n Standard_DS2_v2 -q 2"
   },
   "private": true,
   "dependencies": {
