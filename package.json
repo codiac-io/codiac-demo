@@ -96,7 +96,7 @@
     "svg4everybody": "^2.1.9",
     "toyhauler-common": "0.0.3-89",
     "tslib": "^2.0.0",
-    "xlsx": "^0.14.4",
+    "xlsx": "^0.17.0",
     "yaml": "^1.10.2",
     "zone.js": "~0.10.2"
   },
