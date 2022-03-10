@@ -13,7 +13,7 @@
       "targets": [
         {
           "environment": "default",
-          "registryUrl": "devcodiaccontainers.azurecr.io"
+          "registryUrl": "codiacDemoAcr.azurecr.io"
         }
       ],
       "incarnations": [],

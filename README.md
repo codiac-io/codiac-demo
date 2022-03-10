@@ -25,3 +25,15 @@ Quick start
 - run line: codiac publish
 
 - run line: codiac deploy
+
+- run line: codiac portal
+
+- login
+
+- create new cabinet in QA [any name]
+
+- open enterprise versions sidebar
+
+- find one you like, drag, drop, confirm
+
+- click on the cabinet name to see the results. TLS takes about 30sec to resolve. wait for it.
