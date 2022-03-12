@@ -14,19 +14,19 @@ Quick start
 
 - open terminal: ctrl + `
 
-- run line: npm install -g @angular/cli
+- run cmd: npm i -g @codiac.io/codiac-cli
 
-- run line: az login
+- run cmd: az login
   - you must be added to the codiac subscription prior to running, for the demo to work
-- run line: npm run set-cluster
+- run cmd: npm run set-cluster
 
-- run line: codiac build
+- run cmd: codiac build
 
-- run line: codiac publish
+- run cmd: codiac publish
 
-- run line: codiac deploy
+- run cmd: codiac deploy
 
-- run line: codiac portal
+- run cmd: codiac portal
 
 - login
 
