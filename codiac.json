@@ -1,7 +1,7 @@
 {
   "name": "demo-front-end",
   "tenantCode": "codemo",
-  "codeVersion": "1.0.18",
+  "codeVersion": "1.0.19-0",
   "buildDef": [
     "echo"
   ],
