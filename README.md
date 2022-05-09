@@ -8,7 +8,7 @@ Prerequisite
 
 Quick start
 
-- clone repo: [codiac-demo](https://github.com/codiac-io/codiac-demo)
+- clone repo which contains the Dockerfile you want in Codiac
 
 - open vscode in root directory
 
@@ -17,23 +17,27 @@ Quick start
 - run cmd: npm i -g @codiac.io/codiac-cli
 
 - run cmd: az login
-  - you must be added to the codiac subscription prior to running, for the demo to work
-- run cmd: npm run set-cluster
 
+  - you must be added to the subscription prior to running
+
+- run cmd: az account set --subscription [Your Subcription ID]
+
+- run cmd: codiac noc:cluster:create [Cluster name] -p sof -s [Your Subcription ID] -g [Cluster resource group name] -l [Datacenter location e.g. 'UK West'] -n [Node type e.g. 'Standard_DS2_v2'] -q [Node count e.g. 2]
+
+  - subnet is optional
+  - service principal creds are optional
+    - If none provided Codiac will atempt to create one.
+    - Ensure you have AAD user admin permissions if you want Codiac to create the service principal
+
+- run cmds to set initial cluster context
+  - az aks get-credentials -n [Cluster name] -g [Cluster resource group name] --overwrite-existing
+  - kubectl config use-context [Cluster name]
+- run cmd: codiac noc:cluster:init
+- run cmd: codiac login
+- run cmd: codiac image:add
+- run cmd: codiac asset:create
+- run cmd: codiac cabinet:create
 - run cmd: codiac build
-
 - run cmd: codiac publish
-
 - run cmd: codiac deploy
-
 - run cmd: codiac portal
-
-- login
-
-- create new cabinet in QA [any name]
-
-- open enterprise versions sidebar
-
-- find one you like, drag, drop, confirm
-
-- click on the cabinet name to see the results. TLS takes about 30sec to resolve. wait for it.
