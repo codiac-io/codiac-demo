@@ -22,19 +22,20 @@ Quick start
 
 - run cmd: az account set --subscription [Your Subcription ID]
 
-- run cmd: codiac noc:cluster:create [Cluster name] -p sof -s [Your Subcription ID] -g [Cluster resource group name] -l [Datacenter location e.g. 'UK West'] -n [Node type e.g. 'Standard_DS2_v2'] -q [Node count e.g. 2]
-
-  - subnet is optional
-  - service principal creds are optional
+- run cmd: codiac noc:cluster:create 
+  - [Cluster name] 
+  - [Codiac Acct ID]
+  - [Your Azure Subcription ID] 
+  - [Cluster resource group name] 
+  - [Datacenter location e.g. 'UK West'] 
+  - [Node type e.g. 'Standard_DS2_v2'] 
+  - [Node count e.g. 2]
+  - [subnet is optional]
+  - [service principal creds are optional]
     - If none provided Codiac will atempt to create one.
     - Ensure you have AAD user admin permissions if you want Codiac to create the service principal
-
-- run cmds to set initial cluster context
-  - az aks get-credentials -n [Cluster name] -g [Cluster resource group name] --overwrite-existing
-  - kubectl config use-context [Cluster name]
 - run cmd: codiac noc:cluster:init
 - run cmd: codiac login
-- run cmd: codiac image:add
 - run cmd: codiac asset:create
 - run cmd: codiac cabinet:create
 - run cmd: codiac build
