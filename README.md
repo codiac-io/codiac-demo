@@ -18,7 +18,6 @@ Quick start
 
 - run cmd: az login
   - you must be added to the codiac subscription prior to running, for the demo to work
-- run cmd: npm run set-cluster
 
 - run cmd: codiac build
 
@@ -28,11 +27,9 @@ Quick start
 
 - run cmd: codiac portal
 
-- login
+- create new cabinet in any environment [any name]
 
-- create new cabinet in QA [any name]
-
-- open enterprise versions sidebar
+- open versions sidebar
 
 - find one you like, drag, drop, confirm
 
