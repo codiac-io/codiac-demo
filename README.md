@@ -14,10 +14,6 @@ Quick start
 
 - open a command terminal: ctrl + `
 
-- run cmd: az login
-
-  - you must be added to the subscription prior to running
-  
 - run cmd: npm i -g @codiac.io/codiac-cli
 
 - run cmd: codiac init .
@@ -27,6 +23,10 @@ Quick start
 - run cmd: codiac login
 
 - run cmd: codiac whereami
+
+- run cmd: az login
+
+  - you must be added to the subscription prior to running
 
 - docker exec -it codiac-relay sh
   - az login
