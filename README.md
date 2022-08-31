@@ -12,15 +12,25 @@ Quick start
 
 - open vscode in root directory
 
-- open terminal: ctrl + `
-
-- run cmd: npm i -g @codiac.io/codiac-cli
+- open a command terminal: ctrl + `
 
 - run cmd: az login
 
   - you must be added to the subscription prior to running
+  
+- run cmd: npm i -g @codiac.io/codiac-cli
 
-- run cmd: az account set --subscription [Your Subcription ID]
+- run cmd: codiac init .
+
+- set tenantCode in codiac.json
+
+- run cmd: codiac login
+
+- run cmd: codiac whereami
+
+- docker exec -it codiac-relay sh
+  - az login
+  - exit
 
 - run cmd: codiac noc:cluster:create 
   - [Cluster name] 
@@ -35,7 +45,10 @@ Quick start
     - If none provided Codiac will atempt to create one.
     - Ensure you have AAD user admin permissions if you want Codiac to create the service principal
 - run cmd: codiac noc:cluster:init
-- run cmd: codiac login
+- got to portal.azure.com > container-registry > access control
+  - set acrPull for 'svc-prn-[cluster-name]'
+  - get cluster IP from portal
+- run cmd: codiac host:map [tentant].oncodiac.io
 - run cmd: codiac asset:create
 - run cmd: codiac cabinet:create
 - run cmd: codiac build
