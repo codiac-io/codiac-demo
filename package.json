@@ -1,6 +1,6 @@
 {
   "name": "codiac-front-end",
-  "version": "1.0.2-17",
+  "version": "1.0.6",
   "scripts": {
     "local": "ng s --configuration=local",
     "s": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng s --poll 2000",
@@ -53,6 +53,7 @@
     "@angular/platform-browser-dynamic": "^10.2.4",
     "@angular/platform-server": "^10.2.4",
     "@angular/router": "^10.2.4",
+    "@codiac.io/codiac-cli": "^1.2.73",
     "@datorama/akita": "^3.18.0",
     "@datorama/akita-ngdevtools": "^6.0.0",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
