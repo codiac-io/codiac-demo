@@ -92,7 +92,7 @@
     "rickshaw": "^1.6.5",
     "rxjs": "^6.6.3",
     "semver": "^7.3.4",
-    "svg-sprite": "^1.5.0",
+    "svg-sprite": "^1.5.4",
     "svg4everybody": "^2.1.9",
     "toyhauler-common": "0.0.3-89",
     "tslib": "^2.0.0",
