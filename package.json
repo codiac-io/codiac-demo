@@ -65,7 +65,7 @@
     "d3": "^5.9.7",
     "dot-object": "^2.1.4",
     "echarts": "^4.2.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "hash-sum": "^2.0.0",
     "highlight.js": "^9.15.10",
     "https": "^1.0.0",
